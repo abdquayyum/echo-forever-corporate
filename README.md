@@ -1,0 +1,76 @@
+# ECHO FOREVER LLC — Where Culture Meets Capital
+
+> **Institutional Corporate Gateway & Brand Architecture Platform**  
+> *One parent company. Multiple business platforms. Shared vision. Lasting impact.*
+
+---
+
+## Executive Overview
+
+**ECHO FOREVER LLC** is a diversified parent company designed to connect culture, business, entrepreneurship, and community through an integrated ecosystem of specialized platforms and generational initiatives. Operating with an institutional mindset, Echo Forever unites curated executive experiences, leadership networks, venture co-development, editorial dispatches, and philanthropic stewardship under a coherent corporate architecture.
+
+---
+
+## Ecosystem Architecture (Five Pillars)
+
+1. **Echo Experiences (`01`)** — *Curated Gatherings & Forums*  
+   Flagship launchpad hosting private executive dinners, cultural salons, and leadership forums where high-trust relationships begin.
+2. **Echo Collective (`02`)** — *Private Network & Community*  
+   Invitation-driven network connecting founders, operators, executives, and cultural architects across disciplines.
+3. **Echo Ventures (`03`)** — *Venture & Partnership Platform*  
+   Commercial development and strategic co-ventures cultivating scalable concepts and durable enterprise value.
+4. **Echo Journal (`04`)** — *Editorial & Cultural Intelligence*  
+   Institutional publication documenting long-form essays, dispatches, and dialogues shaping tomorrow's economy.
+5. **Echo Foundation (`05`)** — *Philanthropy & Social Impact*  
+   Generational stewardship focusing on educational access, community resilience, youth leadership, and a long-term commitment to Haiti.
+
+---
+
+## Technical & Motion Architecture
+
+This enterprise web portal is built with modern web standards, delivering 60fps GPU-accelerated performance without heavyweight framework overhead:
+
+- **Single-Page Application (SPA)**: Lightweight 9-view reactive client-side router (`home`, `about`, `ecosystem`, `experiences`, `collective`, `ventures`, `journal`, `foundation`, `contact`).
+- **Institutional Visual Identity**: Dark obsidian aesthetics (`#080B12`, `#101827`, `#171D29`), ice/soft blue highlights (`#B9DDF7`, `#78BCEB`), champagne gold foundation accents (`#C7AD7A`), and 24px blurred glassmorphic docks.
+- **Authoritative Hero Typography**: Clean, editorial headline entrance with a whole-phrase vertical lift (`data-aos="fade-down"`, 1000ms duration) and continuous dual-tone gradient background-clip shimmer on `"CULTURE"` and `"CAPITAL."`.
+- **Cyberpunk Cipher Decryption Engine**: Real-time cryptographic text glyph resolver with smooth stabilization on the Hero supporting thesis statement.
+- **Scroll-Triggered Kinetic Typography**: Reusable 3D character-by-character reveal engine (`buildKineticHeadlineHTML`) paired with an optimized `IntersectionObserver` (`threshold: 0.25`, `rootMargin: '0px 0px -60px 0px'`) animating:
+  - **Section 02 Institutional Ethos Pull-Quote**: *“One parent company. Multiple business platforms. Shared vision. Lasting impact.”*
+  - **Section 08 Call to Action**: *"LET’S BUILD SOMETHING THAT LASTS."* with sky-blue gradient highlights on `"BUILD"` and `"LASTS."`.
+- **Micro-Interactions & Telemetry**:
+  - Interactive radial spotlight cursor tracking on glass and bento panels.
+  - Physics-based magnetic CTAs.
+  - Floating vertical scroll telemetry rail with percentage readout and jump-to-next-section navigation.
+  - Top laser progress bar reflecting document scroll depth.
+  - Fully accessible modals for event RSVP requests, journal article reading, and legal policies.
+
+---
+
+## Repository Structure
+
+```
+echo-forever-corporate/
+├── index.html       # Complete institutional single-page application & motion engine
+└── README.md        # Corporate architecture & engineering documentation
+```
+
+---
+
+## Local Development
+
+Open `index.html` directly in any modern browser, or run a local development server:
+
+```bash
+# Using Python
+python3 -m http.server 8000
+
+# Using Node.js
+npx serve .
+```
+
+---
+
+## License & Legal
+
+© 2026 ECHO FOREVER LLC. All Rights Reserved.  
+Institutional Notice: Echo Forever LLC is a parent holding and brand architecture platform. All intellectual property, marks, and content are the exclusive property of Echo Forever LLC.

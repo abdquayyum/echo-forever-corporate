@@ -1,0 +1,3006 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECHO FOREVER LLC — Where Culture Meets Capital</title>
+  <meta name="description" content="ECHO FOREVER LLC is a diversified parent company connecting culture, business, entrepreneurship, and community through a growing ecosystem of platforms and initiatives." />
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif), Inter (UI Sans), JetBrains Mono (Metadata) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#080B12',
+            navy: '#101827',
+            charcoal: '#171D29',
+            ice: '#B9DDF7',
+            silver: '#C6CBD3',
+            gold: '#C7AD7A',
+            softblue: '#78BCEB',
+            muted: '#8993A3'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* ==========================================================================
+       APPLE + BLACKROCK INSTITUTIONAL DESIGN SYSTEM & GLASSMORPHISM
+       ========================================================================== */
+    :root {
+      --midnight: #080B12;
+      --navy: #101827;
+      --charcoal: #171D29;
+      --ice: #B9DDF7;
+      --silver: #C6CBD3;
+      --gold: #C7AD7A;
+      --softblue: #78BCEB;
+      --muted: #8993A3;
+    }
+
+    body {
+      background-color: #080B12;
+      color: #FFFFFF;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Refined Glassmorphism Surfaces */
+    .glass-panel {
+      background: linear-gradient(135deg, rgba(23, 29, 41, 0.74) 0%, rgba(16, 24, 39, 0.56) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(198, 203, 211, 0.14);
+    }
+
+    .glass-panel-gold {
+      background: linear-gradient(135deg, rgba(32, 28, 22, 0.80) 0%, rgba(16, 24, 39, 0.68) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(199, 173, 122, 0.30);
+    }
+
+    .glass-dock {
+      background: rgba(8, 11, 18, 0.74);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+    }
+
+    .glass-dock-gold {
+      background: rgba(8, 11, 18, 0.76);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(199, 173, 122, 0.32);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+    }
+
+    /* Native High-Precision data-aos Scroll Animation Engine */
+    [data-aos] {
+      opacity: 0;
+      transition-property: opacity, transform;
+      transition-duration: 850ms;
+      transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    [data-aos="fade-up"] {
+      transform: translate3d(0, 38px, 0);
+    }
+
+    [data-aos="fade-down"] {
+      transform: translate3d(0, -36px, 0);
+    }
+
+    [data-aos="fade-right"] {
+      transform: translate3d(-46px, 0, 0);
+    }
+
+    [data-aos="fade-left"] {
+      transform: translate3d(46px, 0, 0);
+    }
+
+    [data-aos="zoom-in"] {
+      transform: scale(0.95) translate3d(0, 20px, 0);
+    }
+
+    [data-aos].aos-animate {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .kinetic-char {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
+
+    /* Hero Editorial Shimmer & Entrance */
+    .hero-shimmer {
+      background: linear-gradient(135deg, #FFFFFF 0%, #B9DDF7 40%, #FFFFFF 60%, #78BCEB 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textShimmer 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes textShimmer {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    /* Kinetic Typography Character Reveal Animation */
+    .kinetic-word {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .kinetic-char {
+      display: inline-block;
+      opacity: 0;
+      transform: translate3d(0, 32px, 0) rotateX(-20deg);
+      transition: opacity 720ms cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 720ms cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .kinetic-char.revealed {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) rotateX(0deg);
+    }
+
+    /* Magnetic Button Smooth Physics */
+    .magnetic-btn {
+      transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 300ms ease, background-color 300ms ease, border-color 300ms ease;
+      will-change: transform;
+    }
+
+    /* ==========================================================================
+       BESPOKE SCROLL CHOREOGRAPHY, LASER DIVIDERS & SPOTLIGHT SURFACES
+       ========================================================================== */
+    @keyframes scrollDrop {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(220%);
+        opacity: 0;
+      }
+    }
+
+    @keyframes pulseRing {
+      0% {
+        transform: scale(0.92);
+        opacity: 0.65;
+      }
+      50% {
+        transform: scale(1.12);
+        opacity: 0.2;
+      }
+      100% {
+        transform: scale(0.92);
+        opacity: 0.65;
+      }
+    }
+
+    @keyframes shimmerSweep {
+      0% {
+        transform: translateX(-120%);
+      }
+      100% {
+        transform: translateX(120%);
+      }
+    }
+
+    .animate-scroll-drop {
+      animation: scrollDrop 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+
+    .animate-pulse-ring {
+      animation: pulseRing 3.2s ease-in-out infinite;
+    }
+
+    /* Interactive Cursor Spotlight on Glass & Bento Cards */
+    .spotlight-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .spotlight-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        520px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(185, 221, 247, 0.13),
+        transparent 45%
+      );
+      opacity: 0;
+      transition: opacity 400ms ease;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .spotlight-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Architectural Grid Texture Overlay */
+    .bg-architectural-grid {
+      background-size: 64px 64px;
+      background-image: 
+        linear-gradient(to right, rgba(198, 203, 211, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(198, 203, 211, 0.04) 1px, transparent 1px);
+    }
+
+    /* Animated Section Connector Spine */
+    .section-connector {
+      position: relative;
+      width: 1px;
+      height: 76px;
+      margin: 0 auto;
+      background: rgba(198, 203, 211, 0.14);
+      overflow: hidden;
+    }
+
+    .section-connector::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 45%;
+      background: linear-gradient(to bottom, transparent, #B9DDF7, transparent);
+      animation: scrollDrop 2.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080B12;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #171D29;
+      border-radius: 4px;
+      border: 1px solid rgba(185, 221, 247, 0.15);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #253045;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-[#080B12] text-white selection:bg-[#B9DDF7] selection:text-[#080B12]">
+
+  <!-- ==========================================================================
+       TOP SCROLL PROGRESS LASER BEAM & FLOATING TELEMETRY RAIL
+       ========================================================================== -->
+  <div class="fixed top-0 left-0 right-0 h-[2px] z-[60] bg-white/5 pointer-events-none">
+    <div id="scroll-progress-bar" class="h-full w-0 bg-gradient-to-r from-[#B9DDF7] via-[#78BCEB] to-[#C7AD7A] shadow-[0_0_12px_rgba(185,221,247,0.8)] transition-[width] duration-75"></div>
+  </div>
+
+  <!-- Right-Edge Floating Scroll Telemetry HUD (Desktop) -->
+  <aside id="scroll-telemetry-rail" class="hidden 2xl:flex fixed right-6 top-1/2 -translate-y-1/2 z-40 flex-col items-center gap-3 py-4 px-2.5 rounded-full glass-panel border border-white/10 shadow-2xl">
+    <span id="telemetry-percent" class="text-[9px] font-mono tracking-widest text-[#B9DDF7] uppercase">00%</span>
+    <div class="w-[1px] h-20 bg-white/10 relative overflow-hidden rounded-full">
+      <div id="telemetry-thumb" class="w-full bg-gradient-to-b from-[#B9DDF7] to-[#C7AD7A] h-0 transition-all duration-150"></div>
+    </div>
+    <button onclick="scrollToNextSection()" title="Scroll Next" class="w-7 h-7 rounded-full border border-[#B9DDF7]/30 bg-[#101827] hover:bg-[#B9DDF7] text-[#B9DDF7] hover:text-[#080B12] flex items-center justify-center transition-all cursor-pointer group">
+      <i data-lucide="chevrons-down" class="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform"></i>
+    </button>
+  </aside>
+
+  <!-- ==========================================================================
+       STICKY INSTITUTIONAL NAVIGATION HEADER
+       ========================================================================== -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-5 bg-gradient-to-b from-[#080B12]/90 to-transparent border-b border-[#C6CBD3]/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <!-- Brand Identity & Monogram -->
+      <button onclick="navigateTo('home')" class="flex items-center gap-3.5 text-left group cursor-pointer focus:outline-none">
+        <div id="header-monogram" class="w-10 h-10 relative inline-flex items-center justify-center rounded-lg border border-[#B9DDF7]/30 bg-[#101827]/90 text-white shadow-inner transition-all duration-500">
+          <svg viewBox="0 0 48 48" fill="none" class="w-3/5 h-3/5" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 12H26M10 24H22M10 36H26M10 12V36" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" />
+            <path id="header-monogram-accent" d="M26 12H38M26 24H35M26 12V36" stroke="#B9DDF7" stroke-width="2.5" stroke-linecap="square" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-sm sm:text-base font-semibold tracking-[0.22em] text-white group-hover:text-[#B9DDF7] transition-colors">
+            ECHO FOREVER
+          </div>
+          <div class="text-[10px] tracking-[0.18em] text-[#8993A3] uppercase hidden sm:block">
+            Where Culture Meets Capital
+          </div>
+        </div>
+      </button>
+
+      <!-- Desktop Navigation Links -->
+      <nav id="desktop-nav" class="hidden xl:flex items-center gap-1" aria-label="Primary Navigation">
+        <!-- Dynamically populated & highlighted via JS -->
+      </nav>
+
+      <!-- Desktop Magnetic CTA & Mobile Toggle -->
+      <div class="flex items-center gap-3">
+        <div class="hidden sm:block">
+          <button id="header-cta-btn" onclick="navigateTo('contact')" class="magnetic-btn group relative inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-xs uppercase tracking-[0.14em] bg-gradient-to-r from-[#B9DDF7] via-[#96CCF3] to-[#78BCEB] text-[#080B12] font-medium shadow-[0_0_30px_rgba(185,221,247,0.18)] hover:shadow-[0_0_40px_rgba(185,221,247,0.32)] border border-white/40 cursor-pointer">
+            <span>Connect With Us</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="xl:hidden p-2.5 rounded-lg border border-[#C6CBD3]/20 bg-[#101827]/80 text-white hover:border-[#B9DDF7]/50 transition-colors cursor-pointer" aria-label="Toggle Menu">
+          <i id="mobile-menu-icon" data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Full-Screen Overlay Menu -->
+    <div id="mobile-menu-overlay" class="hidden xl:hidden fixed inset-x-0 top-[68px] bottom-0 bg-[#080B12]/98 backdrop-blur-2xl border-t border-[#C6CBD3]/15 z-50 overflow-y-auto">
+      <div class="max-w-lg mx-auto px-6 py-8 flex flex-col justify-between min-h-full">
+        <div id="mobile-nav-list" class="space-y-2">
+          <!-- Populated by JS -->
+        </div>
+        <div class="pt-8 mt-8 border-t border-[#C6CBD3]/15 space-y-4">
+          <p class="text-xs text-[#8993A3] leading-relaxed">
+            Building connections, creating opportunities, and developing ideas that shape what comes next.
+          </p>
+          <button onclick="navigateTo('contact')" class="w-full inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium bg-gradient-to-r from-[#B9DDF7] via-[#96CCF3] to-[#78BCEB] text-[#080B12] cursor-pointer">
+            <span>Connect With Us</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       DYNAMIC SPA VIEW CONTAINER (9 COMPLETE CORPORATE VIEWS)
+       ========================================================================== -->
+  <main id="app-view" class="pt-16 min-h-[80vh]"></main>
+
+  <!-- ==========================================================================
+       SECTION 09 — SOPHISTICATED MULTI-COLUMN CORPORATE FOOTER
+       ========================================================================== -->
+  <footer class="bg-[#080B12] border-t border-[#C6CBD3]/15 text-[#C6CBD3]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-[#C6CBD3]/12">
+        <!-- Column 1: Brand Identity (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="flex items-center gap-3.5">
+            <div class="w-11 h-11 relative inline-flex items-center justify-center rounded-lg border border-[#B9DDF7]/30 bg-[#101827]/90 text-white shadow-inner">
+              <svg viewBox="0 0 48 48" fill="none" class="w-3/5 h-3/5" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 12H26M10 24H22M10 36H26M10 12V36" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" />
+                <path d="M26 12H38M26 24H35M26 12V36" stroke="#B9DDF7" stroke-width="2.5" stroke-linecap="square" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-base font-semibold tracking-[0.22em] text-white">
+                ECHO FOREVER LLC
+              </div>
+              <div class="text-xs tracking-[0.2em] text-[#B9DDF7] uppercase">
+                WHERE CULTURE MEETS CAPITAL.
+              </div>
+            </div>
+          </div>
+          <p class="text-sm text-[#8993A3] max-w-md leading-relaxed">
+            A diversified parent company connecting culture, business, entrepreneurship, and community through an integrated ecosystem of platforms and long-term initiatives.
+          </p>
+        </div>
+
+        <!-- Column 2: Corporate Navigation (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="text-xs font-semibold uppercase tracking-[0.2em] text-white">
+            Corporate
+          </div>
+          <ul class="space-y-2.5 text-sm">
+            <li><button onclick="navigateTo('home')" class="text-[#8993A3] hover:text-white transition-colors cursor-pointer">Home Gateway</button></li>
+            <li><button onclick="navigateTo('about')" class="text-[#8993A3] hover:text-white transition-colors cursor-pointer">About & Philosophy</button></li>
+            <li><button onclick="navigateTo('ecosystem')" class="text-[#8993A3] hover:text-white transition-colors cursor-pointer">Our Ecosystem</button></li>
+            <li><button onclick="navigateTo('journal')" class="text-[#8993A3] hover:text-white transition-colors cursor-pointer">Echo Journal</button></li>
+            <li><button onclick="navigateTo('contact')" class="text-[#8993A3] hover:text-white transition-colors cursor-pointer">Inquiries & Contact</button></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Ecosystem Platforms (3 cols) -->
+        <div class="lg:col-span-3 space-y-4">
+          <div class="text-xs font-semibold uppercase tracking-[0.2em] text-white">
+            Ecosystem Platforms
+          </div>
+          <ul class="space-y-2.5 text-sm">
+            <li>
+              <button onclick="navigateTo('experiences')" class="text-[#8993A3] hover:text-[#B9DDF7] transition-colors flex items-center gap-2 cursor-pointer">
+                <span>Echo Experiences</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-[#B9DDF7]/10 text-[#B9DDF7] border border-[#B9DDF7]/25">Flagship</span>
+              </button>
+            </li>
+            <li><button onclick="navigateTo('collective')" class="text-[#8993A3] hover:text-white transition-colors cursor-pointer">Echo Collective</button></li>
+            <li><button onclick="navigateTo('ventures')" class="text-[#8993A3] hover:text-white transition-colors cursor-pointer">Echo Ventures</button></li>
+            <li><button onclick="navigateTo('journal')" class="text-[#8993A3] hover:text-white transition-colors cursor-pointer">Echo Journal</button></li>
+            <li><button onclick="navigateTo('foundation')" class="text-[#8993A3] hover:text-[#C7AD7A] transition-colors cursor-pointer">Echo Foundation</button></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Correspondence (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="text-xs font-semibold uppercase tracking-[0.2em] text-white">
+            Correspondence
+          </div>
+          <p class="text-xs text-[#8993A3] leading-relaxed">
+            For corporate partnerships, sponsorships, membership nominations, or press inquiries:
+          </p>
+          <button onclick="navigateTo('contact')" class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-[#B9DDF7] hover:text-white transition-colors cursor-pointer">
+            <span>Direct Inquiry Desk</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </button>
+          <div class="pt-2 flex items-center gap-2.5 text-xs text-[#8993A3]">
+            <span class="px-2.5 py-1 rounded border border-[#C6CBD3]/15 bg-[#101827]">LinkedIn</span>
+            <span class="px-2.5 py-1 rounded border border-[#C6CBD3]/15 bg-[#101827]">Instagram</span>
+            <span class="px-2.5 py-1 rounded border border-[#C6CBD3]/15 bg-[#101827]">X</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Institutional Disclaimer & Copyright -->
+      <div class="pt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 text-xs text-[#8993A3]">
+        <div class="space-y-1.5 max-w-3xl">
+          <p class="text-[#C6CBD3]">
+            © <span id="footer-year">2026</span> ECHO FOREVER LLC. All Rights Reserved. ONE PARENT COMPANY. MULTIPLE BUSINESS PLATFORMS. SHARED VISION. LASTING IMPACT.
+          </p>
+          <p class="text-[11px] text-[#8993A3]/80 leading-relaxed">
+            Institutional Notice: Echo Forever LLC is a parent holding and brand architecture platform. Nothing on this website constitutes an offer to sell securities, investment solicitation, regulated financial advisory services, or charitable solicitation prior to formal regulatory registration.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-6 shrink-0">
+          <button onclick="openLegalModal('privacy')" class="hover:text-white transition-colors cursor-pointer underline underline-offset-4">
+            Privacy Policy
+          </button>
+          <button onclick="openLegalModal('terms')" class="hover:text-white transition-colors cursor-pointer underline underline-offset-4">
+            Terms of Use
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       DYNAMIC MODAL CONTAINER (EVENTS, ARTICLES, PRIVACY & TERMS)
+       ========================================================================== -->
+  <div id="modal-root"></div>
+
+  <!-- ==========================================================================
+       VANILLA JAVASCRIPT APPLICATION ARCHITECTURE
+       ========================================================================== -->
+  <script>
+    // ==========================================================================
+    // 1. CORPORATE DATA SOURCE OF TRUTH
+    // ==========================================================================
+    const ECOSYSTEM_PILLARS = [
+      {
+        id: 'experiences',
+        number: '01',
+        title: 'ECHO EXPERIENCES',
+        subtitle: 'Culture, Connections & Experiences.',
+        category: 'CURATED GATHERINGS & FORUMS',
+        accent: '#B9DDF7',
+        description:
+          'Curated rooms, executive forums, private dinners, and cultural gatherings designed to bring together leaders, creators, entrepreneurs, and decision-makers.',
+        longDescription:
+          'Echo Experiences serves as the foundational catalyst of the Echo Forever ecosystem. Through intentionally designed gatherings—ranging from intimate private dining tables to flagship cultural conferences—we cultivate high-trust environments where enduring relationships and strategic collaborations begin.',
+        image:
+          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=85',
+        bentoSpan: 'lg:col-span-7 lg:row-span-2',
+        highlights: [
+          'Private Executive Dinners & Salons',
+          'Cultural Forums & Keynote Gatherings',
+          'Strategic Industry Networking',
+          'Bespoke Brand & Institutional Partnerships'
+        ]
+      },
+      {
+        id: 'collective',
+        number: '02',
+        title: 'ECHO COLLECTIVE',
+        subtitle: 'Relationships That Create Possibilities.',
+        category: 'PRIVATE NETWORK & COMMUNITY',
+        accent: '#78BCEB',
+        description:
+          'An invitation-driven community framework uniting founders, cultural architects, executives, and forward-thinking leaders across disciplines.',
+        longDescription:
+          'Echo Collective is designed for individuals who recognize that proximity to exceptional people accelerates every meaningful endeavor. Structured as a curated network rather than a transactional directory, the Collective connects members to private gatherings, cross-industry dialogue, and collaborative initiatives.',
+        image:
+          'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85',
+        bentoSpan: 'lg:col-span-5',
+        highlights: [
+          'Application & Nomination Architecture',
+          'Private Member Briefings & Roundtables',
+          'Cross-Disciplinary Peer Alignment',
+          'Priority Access to Echo Experiences'
+        ]
+      },
+      {
+        id: 'ventures',
+        number: '03',
+        title: 'ECHO VENTURES',
+        subtitle: 'Ideas With the Potential to Become Something Greater.',
+        category: 'VENTURE & PARTNERSHIP PLATFORM',
+        accent: '#C6CBD3',
+        description:
+          'Our business development, entrepreneurship, and strategic partnership arm focused on cultivating scalable concepts and long-term commercial platforms.',
+        longDescription:
+          'Echo Ventures operates at the intersection of cultural relevance and commercial execution. We collaborate with founders, operators, and corporate partners to structure new business initiatives, align strategic alliances, and build durable enterprise value over time.',
+        image:
+          'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85',
+        bentoSpan: 'lg:col-span-5',
+        highlights: [
+          'Enterprise Concept Development',
+          'Strategic Corporate Co-Ventures',
+          'Founder & Operator Alignment',
+          'Long-Term Commercial Architecture'
+        ]
+      },
+      {
+        id: 'journal',
+        number: '04',
+        title: 'ECHO JOURNAL',
+        subtitle: 'Ideas, Perspectives & Influence.',
+        category: 'EDITORIAL & CULTURAL INTELLIGENCE',
+        accent: '#B9DDF7',
+        description:
+          'An institutional publication documenting the ideas, dialogues, leadership perspectives, and cultural shifts shaping tomorrow’s economy.',
+        longDescription:
+          'Echo Journal is the intellectual voice of Echo Forever. Through long-form essays, institutional dispatches, and conversations with builders across culture and commerce, we document the philosophies and frameworks driving generational impact.',
+        image:
+          'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1200&q=85',
+        bentoSpan: 'lg:col-span-6',
+        highlights: [
+          'Institutional Dispatches & Essays',
+          'Executive & Creator Dialogues',
+          'Cultural & Commercial Analysis',
+          'Ecosystem Announcements'
+        ]
+      },
+      {
+        id: 'foundation',
+        number: '05',
+        title: 'ECHO FOUNDATION',
+        subtitle: 'Building a Greater Tomorrow.',
+        category: 'PHILANTHROPY & SOCIAL IMPACT',
+        accent: '#C7AD7A',
+        description:
+          'Dedicated to community development, educational access, youth leadership, and sustainable long-term initiatives with a dedicated focus on Haiti.',
+        longDescription:
+          'At Echo Forever, responsibility is foundational—not an afterthought. Echo Foundation is structured to channel resources, institutional relationships, and strategic programming toward lasting community resilience, youth development, and educational empowerment, beginning with a deep commitment to Haiti.',
+        image:
+          'https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1400&q=85',
+        bentoSpan: 'lg:col-span-6',
+        highlights: [
+          'Community Development & Resilience',
+          'Educational Access & Infrastructure',
+          'Youth Leadership & Mentorship',
+          'Strategic Focus & Commitment to Haiti'
+        ]
+      }
+    ];
+
+    const UPCOMING_EXPERIENCES = [
+      {
+        id: 'exp-01',
+        title: 'The Inaugural Echo Forever Executive Table',
+        category: 'Private Dinner & Dialogue',
+        location: 'New York Metropolitan Area',
+        timing: 'Upcoming Launch Gathering',
+        access: 'By Invitation & Request',
+        summary:
+          'An intimate evening convening founders, cultural leaders, and corporate strategists to explore the convergence of cultural influence and institutional enterprise.',
+        agenda: [
+          'Private Reception & Curated Introductions',
+          'Keynote Framing: Where Culture Meets Capital',
+          'Moderated Table Dialogue on Long-Term Institution Building',
+          'Strategic Networking & Follow-Up Alignment'
+        ],
+        image:
+          'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=85'
+      },
+      {
+        id: 'exp-02',
+        title: 'Culture & Commerce Leadership Forum',
+        category: 'Executive Forum',
+        location: 'East Coast Flagship Venue',
+        timing: '2026 — 2027 Programming Cycle',
+        access: 'Curated Attendance & Sponsors',
+        summary:
+          'A half-day institutional symposium examining how creative ecosystems, brand equity, and strategic partnerships generate enduring commercial and community value.',
+        agenda: [
+          'Opening Institutional Address by Echo Forever',
+          'Panel I: The Architecture of Modern Cultural Institutions',
+          'Panel II: Strategic Partnerships Across Industries',
+          'Private Patron & Sponsor Roundtable'
+        ],
+        image:
+          'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=85'
+      },
+      {
+        id: 'exp-03',
+        title: 'Echo Foundation Vision & Impact Briefing',
+        category: 'Philanthropic Gathering',
+        location: 'Private Salon Venue',
+        timing: 'Planned Initiative Briefing',
+        access: 'Partners & Community Stewards',
+        summary:
+          'A dedicated gathering outlining the long-term roadmap for Echo Foundation, focusing on educational pathways, youth development, and sustainable community partnerships in Haiti.',
+        agenda: [
+          'Presentation of the Echo Foundation Charter',
+          'Focus Session: Long-Term Educational & Youth Frameworks in Haiti',
+          'Institutional & NGO Collaboration Pathways',
+          'Closing Commitment Dialogue'
+        ],
+        image:
+          'https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1200&q=85'
+      }
+    ];
+
+    const JOURNAL_ARTICLES = [
+      {
+        id: 'art-01',
+        title: 'Where Culture Meets Capital: The Institutional Thesis of Echo Forever',
+        category: 'Institutional Dispatch',
+        readTime: '5 Min Read',
+        date: 'Inaugural Issue',
+        author: 'Echo Forever Editorial Desk',
+        authorRole: 'Corporate Strategy & Communications',
+        excerpt:
+          'Why the next generation of enduring corporate institutions will be built at the intersection of cultural authenticity, disciplined execution, and community stewardship.',
+        image:
+          'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=85',
+        content: [
+          'Across global markets, the boundary between cultural influence and institutional enterprise has fundamentally dissolved. Ideas that shape how people gather, communicate, and aspire are no longer peripheral to business—they are the primary drivers of long-term value creation.',
+          'Echo Forever LLC was conceived with a singular, disciplined conviction: to build a diversified parent institution capable of connecting culture, entrepreneurship, business development, and social responsibility under one coherent roof.',
+          'Rather than rushing to claim every horizon at once, our architecture is intentionally phased. We begin with Echo Experiences—creating the physical and intellectual rooms where high-trust relationships are forged. From those rooms emerge the community of Echo Collective, the commercial initiatives of Echo Ventures, the perspectives of Echo Journal, and the enduring stewardship of Echo Foundation.',
+          'True institutions are not measured by momentary noise. They are measured by clarity of structure, integrity of relationships, and the permanence of what they leave behind.'
+        ]
+      },
+      {
+        id: 'art-02',
+        title: 'The Power of the Curated Room: Why Deliberate Gatherings Still Shape History',
+        category: 'Echo Experiences',
+        readTime: '4 Min Read',
+        date: 'Editorial Essay',
+        author: 'Echo Experiences Curation Team',
+        authorRole: 'Experiences & Programming',
+        excerpt:
+          'In an era of infinite digital connectivity, the highest-value breakthroughs still occur when thoughtful leaders share the same physical table.',
+        image:
+          'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=85',
+        content: [
+          'Digital communication has made global reach effortless, yet genuine alignment remains rare. Trust requires nuance, presence, and unhurried dialogue.',
+          'At Echo Experiences, we approach every private dinner, executive salon, and cultural forum as a piece of institutional architecture. Every guest list, conversation prompt, and spatial detail is calibrated to remove transactional friction and foster authentic strategic connection.',
+          'When creators, operators, and institutional leaders sit across from one another with shared respect, conversations move rapidly from abstract possibility to concrete collaboration.'
+        ]
+      },
+      {
+        id: 'art-03',
+        title: 'Stewardship by Design: Embedding Social Responsibility into Corporate Architecture',
+        category: 'Echo Foundation',
+        readTime: '6 Min Read',
+        date: 'Foundation Perspective',
+        author: 'Echo Foundation Initiative',
+        authorRole: 'Social Impact & Community Development',
+        excerpt:
+          'Why philanthropy should not wait for a company’s final chapter—and how our commitment to youth, education, and Haiti shapes our earliest foundations.',
+        image:
+          'https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=85',
+        content: [
+          'Too often, corporate responsibility is treated as an epilogue—an initiative added only after decades of commercial accumulation. Echo Forever rejects that sequence.',
+          'By establishing the vision for Echo Foundation alongside our commercial and cultural platforms from day one, we ensure that growth and responsibility advance together.',
+          'Our focus on education, youth leadership, and community development—with particular dedication to Haiti—reflects a belief that lasting institutions must elevate the communities that inspire them.'
+        ]
+      },
+      {
+        id: 'art-04',
+        title: 'Building Beyond Boundaries: Five Principles of Long-Term Ecosystem Design',
+        category: 'Ventures & Strategy',
+        readTime: '5 Min Read',
+        date: 'Strategy Note',
+        author: 'Echo Forever Strategy',
+        authorRole: 'Corporate Development',
+        excerpt:
+          'How a unified parent brand allows distinct platforms in media, experiences, community, and business development to compound one another’s strength.',
+        image:
+          'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85',
+        content: [
+          'A great parent company does more than hold separate divisions; it creates a shared gravitational field. When an experience sparks a relationship, that relationship informs a journal perspective, strengthens the collective network, catalyzes a venture concept, and ultimately supports foundational impact.',
+          'Our five-pillar framework is engineered for this exact compounding effect—allowing each platform to develop at the right pace while reinforcing the credibility of the whole.'
+        ]
+      }
+    ];
+
+    const NAV_ITEMS = [
+      { id: 'about', label: 'About' },
+      { id: 'ecosystem', label: 'Our Ecosystem' },
+      { id: 'experiences', label: 'Experiences' },
+      { id: 'collective', label: 'Collective' },
+      { id: 'ventures', label: 'Ventures' },
+      { id: 'journal', label: 'Journal' },
+      { id: 'foundation', label: 'Foundation' },
+      { id: 'contact', label: 'Contact' }
+    ];
+
+    // Reusable helper to build character-by-character kinetic headline/quote HTML
+    function buildKineticHeadlineHTML(wordsArray, baseDelay = 80, staggerMs = 28) {
+      if (!Array.isArray(wordsArray)) return '';
+      let charIndex = 0;
+      return wordsArray
+        .map((wordObj) => {
+          const charsHTML = wordObj.text
+            .split('')
+            .map((ch) => {
+              const delay = baseDelay + charIndex * staggerMs;
+              charIndex++;
+              let colorClass = 'text-white';
+              if (wordObj.colorClass) {
+                colorClass = wordObj.colorClass;
+              } else if (wordObj.highlight) {
+                colorClass = 'bg-gradient-to-r from-white via-[#B9DDF7] to-[#78BCEB] bg-clip-text text-transparent';
+              }
+              return `<span class="kinetic-char ${colorClass}" style="transition-delay: ${delay}ms">${ch}</span>`;
+            })
+            .join('');
+          return `<span class="kinetic-word mr-[0.28em] last:mr-0">${charsHTML}</span>`;
+        })
+        .join(' ');
+    }
+
+    // ==========================================================================
+    // 2. APPLICATION STATE
+    // ==========================================================================
+    let state = {
+      activePage: 'home',
+      mobileMenuOpen: false,
+      experiencesFilter: 'All',
+      journalCategory: 'All',
+      journalSearch: '',
+      selectedArticleId: null,
+      inquiryCategory: 'Business Partnerships'
+    };
+
+    let cipherInterval = null;
+    let aosObserver = null;
+
+    // ==========================================================================
+    // 3. REUSABLE UI HELPERS
+    // ==========================================================================
+    function renderSectionHeader({ index, eyebrow, title, description, light = false, gold = false, align = 'left', aos = 'fade-up', kinetic = false }) {
+      const badgeClasses = gold
+        ? 'border-[#C7AD7A]/40 text-[#C7AD7A] bg-[#C7AD7A]/10'
+        : light
+        ? 'border-[#101827]/20 text-[#101827] bg-[#101827]/5'
+        : 'border-[#B9DDF7]/30 text-[#B9DDF7] bg-[#B9DDF7]/10';
+
+      const eyebrowColor = gold
+        ? 'text-[#C7AD7A]'
+        : light
+        ? 'text-[#101827]/70'
+        : 'text-[#B9DDF7]';
+
+      const titleColor = light ? 'text-[#080B12]' : 'text-white';
+      const descColor = light ? 'text-[#171D29]/80' : 'text-[#C6CBD3]';
+
+      return `
+        <div data-aos="${aos}" class="max-w-3xl ${align === 'center' ? 'mx-auto text-center' : ''} mb-12 md:mb-16">
+          <div class="inline-flex items-center gap-3 mb-4 text-xs uppercase tracking-[0.24em] font-medium ${align === 'center' ? 'justify-center' : ''}">
+            ${index ? `<span class="px-2 py-0.5 rounded border text-[10px] font-mono ${badgeClasses}">${index}</span>` : ''}
+            <span class="${eyebrowColor}">${eyebrow}</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl tracking-tight leading-[1.1] ${titleColor} ${kinetic ? 'kinetic-scroll-target' : ''}">
+            ${title}
+          </h2>
+          ${description ? `<p class="mt-5 text-base sm:text-lg leading-relaxed ${descColor}">${description}</p>` : ''}
+        </div>
+      `;
+    }
+
+    // ==========================================================================
+    // 4. VIEW TEMPLATES (ALL 9 PAGES)
+    // ==========================================================================
+
+    // --- VIEW 1: HOMEPAGE (9 SECTIONS) ---
+    function getHomeHTML() {
+      const heroPillarsHTML = ECOSYSTEM_PILLARS.map((pillar, idx) => {
+        const isLast = idx === ECOSYSTEM_PILLARS.length - 1;
+        const isFoundation = pillar.id === 'foundation';
+        // Make Pillar 05 span full width of the 2-column grid on mobile/tablet so there is never an empty 6th slot
+        const colSpanClass = isLast
+          ? 'col-span-2 sm:col-span-2 lg:col-span-1 text-center lg:text-left'
+          : 'col-span-1 sm:col-span-1 lg:col-span-1 text-left';
+
+        const headerAlignClass = isLast
+          ? 'justify-center lg:justify-between gap-2'
+          : 'justify-between';
+
+        return `
+          <button
+            onclick="navigateTo('${pillar.id}')"
+            data-aos="fade-up"
+            style="transition-delay: ${100 + idx * 75}ms"
+            class="group p-3.5 sm:p-4 rounded-xl bg-[#101827]/60 backdrop-blur-md hover:bg-[#171D29]/90 border transition-all cursor-pointer ${
+              isFoundation
+                ? 'border-[#C7AD7A]/25 hover:border-[#C7AD7A]/65'
+                : 'border-[#C6CBD3]/12 hover:border-[#B9DDF7]/50'
+            } ${colSpanClass}"
+          >
+            <div class="flex items-center ${headerAlignClass} text-[10px] font-mono text-[#8993A3] mb-1">
+              <span>PILLAR ${pillar.number}</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-all ${
+                isFoundation ? 'group-hover:text-[#C7AD7A]' : 'group-hover:text-[#B9DDF7]'
+              }"></i>
+            </div>
+            <div class="text-xs font-semibold tracking-[0.14em] uppercase ${
+              isFoundation ? 'text-[#C7AD7A]' : 'text-white group-hover:text-[#B9DDF7]'
+            }">
+              ${pillar.title}
+            </div>
+          </button>
+        `;
+      }).join('');
+
+      const bentoCardsHTML = ECOSYSTEM_PILLARS.map((pillar, idx) => {
+        const isFoundation = pillar.id === 'foundation';
+        const isExperiences = pillar.id === 'experiences';
+        const isLast = idx === ECOSYSTEM_PILLARS.length - 1;
+        const cardAos =
+          idx === 0
+            ? 'fade-right'
+            : idx === 1 || idx === 2
+            ? 'fade-left'
+            : idx === 3
+            ? 'fade-right'
+            : 'fade-left';
+
+        // Ensure Pillar 05 spans full width on 2-column tablet layouts and pairs cleanly with Pillar 04 on 12-col desktop
+        const spanClasses = `${pillar.bentoSpan} ${isLast ? 'md:col-span-2 lg:col-span-6' : 'md:col-span-1'}`;
+        const minHeightClass = isExperiences ? 'min-h-[520px] lg:min-h-[640px]' : 'min-h-[390px] lg:min-h-[420px]';
+
+        return `
+          <div
+            onclick="navigateTo('${pillar.id}')"
+            data-aos="${cardAos}"
+            style="transition-delay: ${idx * 75}ms"
+            class="spotlight-card ${spanClasses} ${minHeightClass} group relative rounded-[26px] overflow-hidden cursor-pointer border transition-all duration-700 flex flex-col justify-between p-4 sm:p-5 bg-[#080B12] shadow-[0_20px_50px_rgba(0,0,0,0.65)] ${
+              isFoundation
+                ? 'border-[#C7AD7A]/30 hover:border-[#C7AD7A]/75'
+                : 'border-[#C6CBD3]/15 hover:border-[#B9DDF7]/60'
+            }"
+          >
+            <!-- Background Photography with Smooth Scale on Hover -->
+            <div class="absolute inset-0 overflow-hidden">
+              <img
+                src="${pillar.image}"
+                alt="${pillar.title}"
+                class="w-full h-full object-cover object-center scale-100 group-hover:scale-110 transition-transform duration-1000 ease-out brightness-90 contrast-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-b from-[#080B12]/35 via-transparent to-[#080B12]/85"></div>
+            </div>
+
+            <!-- Top Understated Architectural Index Pill & Frosted Action Orb -->
+            <div class="relative z-10 flex items-center justify-between gap-3">
+              <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full backdrop-blur-xl bg-[#080B12]/65 border ${
+                isFoundation ? 'border-[#C7AD7A]/35 text-[#C7AD7A]' : 'border-white/15 text-white'
+              }">
+                <span class="text-[11px] font-mono tracking-[0.2em]">${pillar.number}</span>
+                <span class="w-1 h-1 rounded-full bg-current opacity-60"></span>
+                <span class="text-[10px] font-mono uppercase tracking-[0.2em] text-[#C6CBD3]">${pillar.category}</span>
+              </div>
+
+              <div class="w-10 h-10 rounded-full backdrop-blur-xl bg-[#080B12]/65 border flex items-center justify-center transition-all duration-500 ${
+                isFoundation
+                  ? 'border-[#C7AD7A]/35 text-[#C7AD7A] group-hover:bg-[#C7AD7A] group-hover:text-[#080B12]'
+                  : 'border-white/15 text-white group-hover:bg-[#B9DDF7] group-hover:text-[#080B12] group-hover:border-[#B9DDF7]'
+              }">
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
+            </div>
+
+            <!-- Floating Frosted Glassmorphic Blurry Text Dock -->
+            <div class="relative z-10 mt-auto rounded-2xl p-5 sm:p-7 transition-all duration-500 ${
+              isFoundation
+                ? 'glass-dock-gold group-hover:border-[#C7AD7A]/60'
+                : 'glass-dock group-hover:border-[#B9DDF7]/45'
+            }">
+              <div class="w-10 h-[2px] rounded-full mb-3.5 transition-all duration-500 group-hover:w-16 ${
+                isFoundation ? 'bg-[#C7AD7A]' : 'bg-[#B9DDF7]'
+              }"></div>
+
+              <div class="text-[11px] font-mono uppercase tracking-[0.2em] mb-1.5 ${
+                isFoundation ? 'text-[#C7AD7A]' : 'text-[#B9DDF7]'
+              }">
+                ${pillar.subtitle}
+              </div>
+
+              <h3 class="font-serif text-2xl sm:text-3xl lg:text-[34px] text-white tracking-tight leading-none mb-3">
+                ${pillar.title}
+              </h3>
+
+              <p class="text-xs sm:text-sm text-[#C6CBD3]/95 leading-relaxed mb-5">
+                ${pillar.description}
+              </p>
+
+              <div class="pt-3.5 border-t border-white/10 flex items-center justify-between text-[11px] uppercase tracking-[0.2em]">
+                <span class="${
+                  isFoundation ? 'text-[#C7AD7A] font-medium' : 'text-white group-hover:text-[#B9DDF7] font-medium transition-colors'
+                }">
+                  Enter Platform
+                </span>
+                <span class="font-mono text-[10px] text-[#8993A3]">
+                  ECHO FOREVER / ${pillar.number}
+                </span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const approachHTML = [
+        {
+          num: '01',
+          title: 'Relationships',
+          subtitle: 'Proximity & High-Trust Alignment',
+          desc: 'Every enduring enterprise begins with the right people in the same room. We prioritize authentic, long-term human relationships over transactional networking.'
+        },
+        {
+          num: '02',
+          title: 'Strategic Partnerships',
+          subtitle: 'Cross-Industry Collaboration',
+          desc: 'We align with established corporations, emerging founders, and cultural institutions to structure collaborations that amplify mutual credibility and reach.'
+        },
+        {
+          num: '03',
+          title: 'Business Development',
+          subtitle: 'Disciplined Commercial Execution',
+          desc: 'We translate creative momentum and network intelligence into structured commercial opportunities, scalable platforms, and sustainable enterprise growth.'
+        },
+        {
+          num: '04',
+          title: 'Cultural Influence',
+          subtitle: 'Shaping the Narrative',
+          desc: 'Through curated experiences and editorial perspective, we participate directly in the conversations that define modern leadership, taste, and ambition.'
+        },
+        {
+          num: '05',
+          title: 'Long-Term Impact',
+          subtitle: 'Generational Stewardship',
+          desc: 'Our decisions are guided by durability. We build platforms designed to endure across market cycles while reinvesting in community empowerment.'
+        }
+      ].map((item, idx) => `
+        <div
+          data-aos="${idx % 2 === 0 ? 'fade-right' : 'fade-left'}"
+          style="transition-delay: ${idx * 60}ms"
+          class="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline group hover:bg-[#171D29]/50 px-4 -mx-4 rounded-xl transition-colors"
+        >
+          <div class="lg:col-span-2 text-xs font-mono text-[#78BCEB] tracking-[0.2em]">
+            PRINCIPLE / ${item.num}
+          </div>
+          <div class="lg:col-span-4">
+            <h3 class="font-serif text-2xl sm:text-3xl text-white group-hover:text-[#B9DDF7] transition-colors">
+              ${item.title}
+            </h3>
+            <div class="text-xs uppercase tracking-[0.16em] text-[#8993A3] mt-1">
+              ${item.subtitle}
+            </div>
+          </div>
+          <div class="lg:col-span-6 text-sm sm:text-base text-[#C6CBD3] leading-relaxed">
+            ${item.desc}
+          </div>
+        </div>
+      `).join('');
+
+      const latestJournalHTML = JOURNAL_ARTICLES.slice(0, 3).map((article, idx) => `
+        <article
+          onclick="openArticleModal('${article.id}')"
+          data-aos="fade-up"
+          style="transition-delay: ${idx * 85}ms"
+          class="group rounded-2xl overflow-hidden glass-panel hover:border-[#B9DDF7]/50 transition-all flex flex-col justify-between cursor-pointer"
+        >
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img
+                src="${article.image}"
+                alt="${article.title}"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#080B12] via-transparent to-transparent"></div>
+              <span class="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.18em] px-3 py-1 rounded-full bg-[#080B12]/80 text-[#B9DDF7] border border-[#B9DDF7]/30">
+                ${article.category}
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 text-xs text-[#8993A3] mb-3">
+                <span>${article.date}</span>
+                <span>•</span>
+                <span>${article.readTime}</span>
+              </div>
+              <h3 class="font-serif text-2xl text-white group-hover:text-[#B9DDF7] transition-colors leading-snug mb-3">
+                ${article.title}
+              </h3>
+              <p class="text-sm text-[#C6CBD3] line-clamp-3 leading-relaxed">
+                ${article.excerpt}
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 flex items-center justify-between text-xs uppercase tracking-[0.18em] text-[#B9DDF7]">
+            <span>Read Dispatch</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+          </div>
+        </article>
+      `).join('');
+
+      const ctaPathwaysHTML = [
+        { title: 'Corporate Partnerships', desc: 'Cross-industry alliances & co-branded institutional initiatives.', cat: 'Business Partnerships' },
+        { title: 'Strategic Collaborations', desc: 'Venture concepts, business development & operator alignment.', cat: 'Corporate Development' },
+        { title: 'Membership Inquiries', desc: 'Nomination & expression of interest for Echo Collective.', cat: 'Collective Membership' },
+        { title: 'Event Sponsorship', desc: 'Patronage & brand alignment for flagship Echo Experiences.', cat: 'Experiences & Sponsorships' },
+        { title: 'Media & Press', desc: 'Editorial requests, speaking engagements & Echo Journal.', cat: 'Media & Press' },
+        { title: 'General Correspondence', desc: 'Direct communication with the Echo Forever executive desk.', cat: 'General Correspondence' }
+      ].map((pathway, idx) => `
+        <button
+          onclick="navigateTo('contact', { inquiryCategory: '${pathway.cat}' })"
+          data-aos="fade-up"
+          style="transition-delay: ${idx * 65}ms"
+          class="p-6 rounded-2xl glass-panel text-left hover:border-[#B9DDF7]/50 group transition-all cursor-pointer flex flex-col justify-between"
+        >
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-serif text-xl text-white group-hover:text-[#B9DDF7] transition-colors">
+              ${pathway.title}
+            </span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#8993A3] group-hover:text-[#B9DDF7] transition-colors"></i>
+          </div>
+          <p class="text-xs text-[#8993A3] leading-relaxed">${pathway.desc}</p>
+        </button>
+      `).join('');
+
+      return `
+        <!-- SECTION 01 — HERO -->
+        <section id="sec-hero" class="relative min-h-[calc(100vh-4rem)] flex flex-col justify-between overflow-hidden pt-6 pb-6 sm:pt-10 sm:pb-8 lg:pt-12 lg:pb-8 bg-architectural-grid">
+          <div class="absolute inset-0 z-0">
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=85"
+              alt="Echo Forever Architectural Backdrop"
+              class="w-full h-full object-cover object-center opacity-25 scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-b from-[#080B12] via-[#080B12]/80 to-[#080B12]"></div>
+            <div
+              class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[680px] h-[380px] rounded-full pointer-events-none opacity-25 blur-[130px]"
+              style="background: radial-gradient(circle, #B9DDF7 0%, #78BCEB 45%, transparent 75%);"
+            ></div>
+          </div>
+
+          <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center my-auto flex flex-col justify-center">
+            <!-- Clean EF Monogram Crown with Pulsing Halo -->
+            <div data-aos="fade-down" class="mb-4 sm:mb-6 flex justify-center">
+              <div class="relative inline-flex items-center justify-center">
+                <div class="absolute -inset-2 rounded-2xl border border-[#B9DDF7]/25 animate-pulse-ring pointer-events-none"></div>
+                <div class="w-11 h-11 relative inline-flex items-center justify-center rounded-xl border border-[#B9DDF7]/45 bg-[#101827]/90 text-white shadow-[0_0_30px_rgba(185,221,247,0.2)]">
+                  <svg viewBox="0 0 48 48" fill="none" class="w-3/5 h-3/5" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 12H26M10 24H22M10 36H26M10 12V36" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" />
+                    <path d="M26 12H38M26 24H35M26 12V36" stroke="#B9DDF7" stroke-width="2.5" stroke-linecap="square" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Authoritative Editorial Hero Headline -->
+            <div class="max-w-5xl mx-auto">
+              <h1
+                id="hero-kinetic-headline"
+                data-aos="fade-down"
+                style="transition-duration: 1000ms;"
+                aria-label="WHERE CULTURE MEETS CAPITAL."
+                class="font-serif tracking-tight leading-[1.03] text-4xl sm:text-5xl md:text-6xl lg:text-[74px] font-semibold text-white"
+              >
+                <span>WHERE </span>
+                <span class="bg-gradient-to-r from-white via-[#B9DDF7] to-[#78BCEB] bg-clip-text text-transparent hero-shimmer inline-block">CULTURE</span>
+                <span> MEETS </span>
+                <span class="bg-gradient-to-r from-white via-[#B9DDF7] to-[#78BCEB] bg-clip-text text-transparent hero-shimmer inline-block">CAPITAL.</span>
+              </h1>
+            </div>
+
+            <!-- Cyberpunk Cipher Decryption Supporting Statement -->
+            <div data-aos="fade-up" style="transition-delay: 200ms" class="max-w-2xl mx-auto mt-4 sm:mt-5">
+              <p
+                id="hero-cipher-text"
+                aria-label="Building connections, creating opportunities, and developing ideas that shape what comes next."
+                class="text-sm sm:text-base md:text-lg text-[#C6CBD3] font-light leading-relaxed min-h-[2.75rem]"
+              >
+                Building connections, creating opportunities, and developing ideas that shape what comes next.
+              </p>
+            </div>
+
+            <!-- Primary & Secondary Magnetic CTAs -->
+            <div data-aos="fade-up" style="transition-delay: 300ms" class="mt-6 sm:mt-7 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+              <button onclick="navigateTo('ecosystem')" class="magnetic-btn group relative inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3 text-sm tracking-wide bg-gradient-to-r from-[#B9DDF7] via-[#96CCF3] to-[#78BCEB] text-[#080B12] font-medium shadow-[0_0_30px_rgba(185,221,247,0.18)] hover:shadow-[0_0_40px_rgba(185,221,247,0.32)] border border-white/40 cursor-pointer">
+                <span>Explore Our Ecosystem</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+              <button onclick="navigateTo('about')" class="magnetic-btn group relative inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3 text-sm tracking-wide bg-[#101827]/70 backdrop-blur-md text-white border border-[#C6CBD3]/25 hover:border-[#B9DDF7]/60 hover:bg-[#171D29]/90 cursor-pointer">
+                <span>Discover ECHO Forever</span>
+              </button>
+            </div>
+
+            <!-- 5-Pillar Architectural Bar (Pillar 05 centered when spanning full width) -->
+            <div class="mt-8 sm:mt-10 pt-6 border-t border-[#C6CBD3]/12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
+              ${heroPillarsHTML}
+            </div>
+
+            <!-- Stylish Animated Kinetic Scroll Indicator (Always visible above the fold) -->
+            <div data-aos="fade-up" style="transition-delay: 420ms" class="mt-6 sm:mt-8 flex flex-col items-center justify-center">
+              <button
+                onclick="document.getElementById('sec-who-we-are')?.scrollIntoView({ behavior: 'smooth' })"
+                class="group flex flex-col items-center gap-2 cursor-pointer focus:outline-none"
+                aria-label="Scroll to Who We Are"
+              >
+                <div class="flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.28em] text-[#8993A3] group-hover:text-[#B9DDF7] transition-colors">
+                  <span class="w-6 h-[1px] bg-gradient-to-r from-transparent to-[#B9DDF7]/50 group-hover:w-10 transition-all duration-500"></span>
+                  <span>Scroll to Explore Institution</span>
+                  <span class="w-6 h-[1px] bg-gradient-to-l from-transparent to-[#B9DDF7]/50 group-hover:w-10 transition-all duration-500"></span>
+                </div>
+
+                <!-- Glassmorphic Mouse Capsule + Laser Drop Track -->
+                <div class="relative flex flex-col items-center">
+                  <div class="w-5 h-8 rounded-full border border-[#B9DDF7]/35 bg-[#101827]/75 backdrop-blur-md flex justify-center p-1 shadow-[0_0_20px_rgba(185,221,247,0.15)] group-hover:border-[#B9DDF7] transition-colors">
+                    <span class="w-1 h-2 rounded-full bg-[#B9DDF7] animate-bounce"></span>
+                  </div>
+                  <div class="w-[1px] h-6 bg-white/10 relative overflow-hidden mt-1">
+                    <span class="absolute inset-x-0 top-0 h-3.5 bg-gradient-to-b from-transparent via-[#B9DDF7] to-transparent animate-scroll-drop"></span>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 02 — WHO WE ARE (REFINED EDITORIAL LIGHT SECTION) -->
+        <section id="sec-who-we-are" class="bg-white text-[#080B12] py-24 lg:py-32 border-y border-[#C6CBD3]/30 relative">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              <div data-aos="fade-right" class="lg:col-span-7 space-y-6">
+                ${renderSectionHeader({
+                  index: '02',
+                  eyebrow: 'WHO WE ARE',
+                  title: 'A DIFFERENT KIND OF CORPORATE PLATFORM.',
+                  light: true,
+                  aos: 'fade-down'
+                })}
+                <p class="text-lg sm:text-xl text-[#101827] font-normal leading-relaxed">
+                  ECHO FOREVER is a diversified parent company designed to connect culture, business, entrepreneurship, and community through a growing ecosystem of specialized platforms and long-term initiatives.
+                </p>
+                <p class="text-base text-[#171D29]/80 leading-relaxed">
+                  We operate with an institutional mindset—recognizing that the most enduring enterprises are built where cultural relevance, strategic relationships, and disciplined execution converge. By uniting curated experiences, leadership networks, venture development, editorial voices, and community stewardship under one parent architecture, Echo Forever creates compounding value across industries and generations.
+                </p>
+
+                <div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-[#101827]/15">
+                  <div>
+                    <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#101827]/60">Architecture</div>
+                    <div class="font-serif text-2xl font-semibold text-[#080B12] mt-1">Parent Institution</div>
+                    <p class="text-xs text-[#171D29]/70 mt-1">Unified governance across five distinct platforms.</p>
+                  </div>
+                  <div>
+                    <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#101827]/60">Launch Engine</div>
+                    <div class="font-serif text-2xl font-semibold text-[#080B12] mt-1">Echo Experiences</div>
+                    <p class="text-xs text-[#171D29]/70 mt-1">Curated rooms & gatherings driving ecosystem momentum.</p>
+                  </div>
+                  <div>
+                    <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#101827]/60">Horizon</div>
+                    <div class="font-serif text-2xl font-semibold text-[#080B12] mt-1">Generational</div>
+                    <p class="text-xs text-[#171D29]/70 mt-1">Built for long-term partnerships and lasting impact.</p>
+                  </div>
+                </div>
+
+                <div class="pt-4">
+                  <button onclick="navigateTo('about')" class="inline-flex items-center gap-2.5 text-xs uppercase tracking-[0.2em] font-semibold text-[#080B12] hover:text-[#101827]/70 border-b border-[#080B12] pb-1.5 transition-all cursor-pointer">
+                    <span>Read Our Corporate Charter & Philosophy</span>
+                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div data-aos="fade-left" class="lg:col-span-5">
+                <div class="relative rounded-2xl overflow-hidden bg-[#101827] shadow-2xl border border-[#101827]/10">
+                  <img
+                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85"
+                    alt="Echo Forever Corporate Environment"
+                    class="w-full h-[460px] object-cover opacity-90"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#080B12] via-[#080B12]/30 to-transparent"></div>
+                  <div class="absolute bottom-6 left-6 right-6 p-6 rounded-xl glass-panel text-white">
+                    <div class="text-[10px] font-mono uppercase tracking-[0.24em] text-[#B9DDF7] mb-2">
+                      INSTITUTIONAL ETHOS
+                    </div>
+                    <p class="font-serif text-xl italic leading-snug kinetic-scroll-target" aria-label="“One parent company. Multiple business platforms. Shared vision. Lasting impact.”">
+                      ${buildKineticHeadlineHTML([
+                        { text: '“One', highlight: false },
+                        { text: 'parent', highlight: false },
+                        { text: 'company.', highlight: true },
+                        { text: 'Multiple', highlight: false },
+                        { text: 'business', highlight: false },
+                        { text: 'platforms.', highlight: true },
+                        { text: 'Shared', highlight: false },
+                        { text: 'vision.', highlight: false },
+                        { text: 'Lasting', highlight: true },
+                        { text: 'impact.”', highlight: true }
+                      ], 100, 22)}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 03 — OUR ECOSYSTEM (ASYMMETRIC BENTO GRID WITH GLASSMORPHIC BLURRY TEXT DOCKS) -->
+        <section class="py-24 lg:py-32 bg-[#080B12] relative">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-14 gap-6">
+              ${renderSectionHeader({
+                index: '03',
+                eyebrow: 'OUR ECOSYSTEM',
+                title: 'FIVE PILLARS. ONE VISION.',
+                description: 'Each platform within Echo Forever operates with a clear mandate while reinforcing the strength, relationships, and reach of the parent institution.',
+                aos: 'fade-right'
+              })}
+              <div data-aos="fade-left" class="lg:mb-16">
+                <button onclick="navigateTo('ecosystem')" class="magnetic-btn inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-sm bg-[#101827]/70 backdrop-blur-md text-white border border-[#C6CBD3]/25 hover:border-[#B9DDF7]/60 cursor-pointer">
+                  <span>View Full Ecosystem Matrix</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+              ${bentoCardsHTML}
+            </div>
+
+            <!-- Stylish Inter-Section Scroll Bridge -->
+            <div class="mt-20 flex flex-col items-center justify-center">
+              <div class="text-[10px] font-mono uppercase tracking-[0.26em] text-[#8993A3] mb-3">
+                04 • OPERATING METHODOLOGY
+              </div>
+              <div class="section-connector"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 04 — OUR APPROACH -->
+        <section id="sec-approach" class="py-24 lg:py-32 bg-[#101827] border-y border-[#C6CBD3]/12 bg-architectural-grid">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            ${renderSectionHeader({
+              index: '04',
+              eyebrow: 'OUR APPROACH',
+              title: 'BUILDING BEYOND BOUNDARIES.',
+              description: 'We do not view culture, commerce, and community as separate silos. Our operating methodology is built on five interlocking principles.',
+              aos: 'fade-down'
+            })}
+            <div class="divide-y divide-[#C6CBD3]/15 border-t border-b border-[#C6CBD3]/15">
+              ${approachHTML}
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 05 — ECHO VENTURES -->
+        <section class="py-24 lg:py-32 bg-[#080B12] relative overflow-hidden">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div data-aos="fade-right" class="lg:col-span-6 space-y-6">
+                ${renderSectionHeader({
+                  index: '05',
+                  eyebrow: 'ECHO VENTURES',
+                  title: 'TURNING IDEAS INTO OPPORTUNITIES.',
+                  description: 'Echo Ventures is the business development and strategic partnership vision of Echo Forever—created to identify, structure, and advance high-potential concepts.',
+                  aos: 'fade-down'
+                })}
+                <div class="space-y-4 text-sm sm:text-base text-[#C6CBD3] leading-relaxed">
+                  <p>
+                    Operating as a strategic incubator and partnership platform, Echo Ventures focuses on bridging the gap between compelling vision and disciplined execution. Rather than operating as a traditional passive fund, we work alongside founders, creators, and corporate allies to develop opportunities from the ground up.
+                  </p>
+                  <div class="p-5 rounded-xl glass-panel border-l-2 border-l-[#B9DDF7]">
+                    <div class="text-xs uppercase tracking-[0.2em] text-[#B9DDF7] font-semibold mb-1">
+                      Strategic Mandate
+                    </div>
+                    <p class="text-xs sm:text-sm text-[#C6CBD3]">
+                      Focused on business development, strategic co-ventures, brand-backed platforms, and entrepreneurial alignment.
+                    </p>
+                  </div>
+                </div>
+                <div class="pt-4 flex flex-wrap gap-4">
+                  <button onclick="navigateTo('ventures')" class="magnetic-btn inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-sm bg-gradient-to-r from-[#B9DDF7] via-[#96CCF3] to-[#78BCEB] text-[#080B12] font-medium cursor-pointer">
+                    <span>Explore Echo Ventures</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  </button>
+                  <button onclick="navigateTo('contact', { inquiryCategory: 'Business Partnerships' })" class="magnetic-btn inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-sm bg-[#101827]/70 text-white border border-[#C6CBD3]/25 hover:border-[#B9DDF7]/60 cursor-pointer">
+                    <span>Propose a Strategic Partnership</span>
+                  </button>
+                </div>
+              </div>
+
+              <div data-aos="fade-left" class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                ${[
+                  { title: 'Venture Development', desc: 'Structuring original commercial concepts born within the Echo Forever ecosystem.' },
+                  { title: 'Strategic Partnerships', desc: 'Aligning brands, operators, and institutional capabilities to unlock new market channels.' },
+                  { title: 'Entrepreneurial Ecosystem', desc: 'Connecting visionary builders with the relationships and strategic guidance required to scale.' },
+                  { title: 'Long-Term Value Creation', desc: 'Prioritizing durable business fundamentals and brand integrity over short-term speculation.' }
+                ].map((card, idx) => `
+                  <div data-aos="fade-up" style="transition-delay: ${idx * 80}ms" class="p-6 rounded-2xl glass-panel hover:border-[#B9DDF7]/40 transition-all flex flex-col justify-between min-h-[210px]">
+                    <div class="w-9 h-9 rounded-lg bg-[#B9DDF7]/10 border border-[#B9DDF7]/30 flex items-center justify-center text-xs font-mono text-[#B9DDF7]">
+                      0${idx + 1}
+                    </div>
+                    <div class="mt-6">
+                      <h4 class="font-serif text-xl text-white mb-2">${card.title}</h4>
+                      <p class="text-xs sm:text-sm text-[#8993A3] leading-relaxed">${card.desc}</p>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 06 — ECHO FOUNDATION (CHAMPAGNE GOLD #C7AD7A ACCENTS) -->
+        <section class="py-24 lg:py-32 bg-gradient-to-b from-[#101827] to-[#080B12] border-y border-[#C7AD7A]/25 relative">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div data-aos="zoom-in" class="rounded-3xl glass-panel-gold p-8 sm:p-12 lg:p-16 relative overflow-hidden">
+              <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full pointer-events-none opacity-15 blur-[100px]" style="background: #C7AD7A;"></div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                <div data-aos="fade-right" class="lg:col-span-7 space-y-6">
+                  ${renderSectionHeader({
+                    index: '06',
+                    eyebrow: 'ECHO FOUNDATION',
+                    title: 'OUR RESPONSIBILITY EXTENDS BEYOND THE OPPORTUNITIES WE CREATE.',
+                    gold: true,
+                    aos: 'fade-down'
+                  })}
+                  <p class="text-base sm:text-lg text-[#C6CBD3] leading-relaxed">
+                    Echo Foundation represents the philanthropic and social-impact heart of Echo Forever. As our ecosystem grows, beginning with Echo Experiences, we are committed to channeling perspective, relationships, and resources toward initiatives that uplift communities and create lasting human opportunity.
+                  </p>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    ${[
+                      { title: 'Community Development', text: 'Supporting resilient local infrastructure and community-led advancement.' },
+                      { title: 'Education & Access', text: 'Expanding educational resources and learning pathways for emerging generations.' },
+                      { title: 'Youth Development', text: 'Cultivating leadership, mentorship, and creative confidence in young people.' },
+                      { title: 'Dedicated Focus on Haiti', text: 'A foundational commitment to long-term partnership and sustainable impact in Haiti.' }
+                    ].map(p => `
+                      <div class="p-4 rounded-xl bg-[#080B12]/60 border border-[#C7AD7A]/25">
+                        <div class="text-sm font-semibold text-[#C7AD7A] mb-1">${p.title}</div>
+                        <p class="text-xs text-[#C6CBD3] leading-relaxed">${p.text}</p>
+                      </div>
+                    `).join('')}
+                  </div>
+
+                  <div class="pt-4">
+                    <button onclick="navigateTo('foundation')" class="magnetic-btn inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-sm bg-gradient-to-r from-[#C7AD7A] to-[#DFC89B] text-[#080B12] font-medium border border-white/30 shadow-[0_0_25px_rgba(199,173,122,0.2)] cursor-pointer">
+                      <span>Explore Echo Foundation Vision</span>
+                      <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div data-aos="fade-left" class="lg:col-span-5">
+                  <div class="rounded-2xl overflow-hidden border border-[#C7AD7A]/35 relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=85"
+                      alt="Echo Foundation Stewardship"
+                      class="w-full h-[420px] object-cover"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080B12] via-[#080B12]/40 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                      <div class="text-[10px] font-mono uppercase tracking-[0.24em] text-[#C7AD7A] mb-1">
+                        BUILDING A GREATER TOMORROW
+                      </div>
+                      <div class="font-serif text-2xl text-white">
+                        Community, Education, Youth & Haiti
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 07 — THE LATEST FROM ECHO -->
+        <section class="py-24 lg:py-32 bg-[#080B12]">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
+              ${renderSectionHeader({
+                index: '07',
+                eyebrow: 'DISPATCHES & UPDATES',
+                title: 'THE LATEST FROM ECHO.',
+                description: 'Selected perspectives from Echo Journal, upcoming Echo Experiences, and institutional announcements across the ecosystem.',
+                aos: 'fade-right'
+              })}
+              <div data-aos="fade-left" class="lg:mb-16">
+                <button onclick="navigateTo('journal')" class="magnetic-btn inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-sm bg-[#101827]/70 text-white border border-[#C6CBD3]/25 hover:border-[#B9DDF7]/60 cursor-pointer">
+                  <span>Enter Echo Journal</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              ${latestJournalHTML}
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 08 — CORPORATE CALL TO ACTION -->
+        <section class="py-24 lg:py-32 bg-[#101827] relative overflow-hidden border-t border-[#C6CBD3]/15">
+          <div class="absolute inset-0 pointer-events-none opacity-20" style="background: radial-gradient(circle at 80% 20%, #B9DDF7 0%, transparent 50%);"></div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+              ${renderSectionHeader({
+                index: '08',
+                eyebrow: 'ENGAGE WITH ECHO FOREVER',
+                title: buildKineticHeadlineHTML([
+                  { text: 'LET’S', highlight: false },
+                  { text: 'BUILD', highlight: true },
+                  { text: 'SOMETHING', highlight: false },
+                  { text: 'THAT', highlight: false },
+                  { text: 'LASTS.', highlight: true }
+                ], 90, 32),
+                description: 'Whether you are exploring strategic corporate partnerships, sponsorship of upcoming Echo Experiences, membership alignment, or foundation collaboration, our team welcomes deliberate dialogue.',
+                aos: 'fade-down',
+                kinetic: true
+              })}
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+              ${ctaPathwaysHTML}
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4">
+              <button onclick="navigateTo('contact')" class="magnetic-btn inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-sm bg-gradient-to-r from-[#B9DDF7] via-[#96CCF3] to-[#78BCEB] text-[#080B12] font-medium shadow-[0_0_30px_rgba(185,221,247,0.18)] cursor-pointer">
+                <span>Initiate Direct Correspondence</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    // --- VIEW 2: ABOUT & LEADERSHIP ---
+    function getAboutHTML() {
+      return `
+        <div class="py-16 lg:py-24">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+            <div data-aos="fade-down" class="max-w-4xl">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-xs uppercase tracking-[0.2em] text-[#B9DDF7] mb-6">
+                <span>ABOUT ECHO FOREVER LLC</span>
+              </div>
+              <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.06]">
+                An Institutional Platform Built for Generational Permanence.
+              </h1>
+              <p class="mt-8 text-lg sm:text-xl text-[#C6CBD3] leading-relaxed">
+                ECHO FOREVER LLC is a diversified parent company established around a clear conviction: when cultural intelligence and disciplined enterprise are united under one roof, they create opportunities that transcend single industries.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              ${[
+                {
+                  label: 'OUR VISION',
+                  title: 'The Premier House of Culture & Enterprise',
+                  body: 'To establish an enduring corporate institution that bridges creative influence, strategic relationships, commercial innovation, and philanthropic stewardship across generations.'
+                },
+                {
+                  label: 'OUR MISSION',
+                  title: 'Connecting People, Ideas & Opportunity',
+                  body: 'To curate transformative experiences, cultivate high-trust networks, develop scalable business initiatives, publish defining perspectives, and invest in lasting community development.'
+                },
+                {
+                  label: 'OUR PHILOSOPHY',
+                  title: 'Strategic, Sustainable & Phased Execution',
+                  body: 'Great institutions are built deliberately. We prioritize quality of relationships, operational integrity, and sustainable phased expansion—beginning with Echo Experiences.'
+                }
+              ].map((block, i) => `
+                <div data-aos="fade-up" style="transition-delay: ${i * 90}ms" class="p-8 rounded-2xl glass-panel space-y-4">
+                  <div class="text-xs font-mono uppercase tracking-[0.22em] text-[#B9DDF7]">${block.label}</div>
+                  <h2 class="font-serif text-2xl sm:text-3xl text-white">${block.title}</h2>
+                  <p class="text-sm text-[#C6CBD3] leading-relaxed">${block.body}</p>
+                </div>
+              `).join('')}
+            </div>
+
+            <div data-aos="fade-up" class="rounded-3xl bg-[#101827] border border-[#C6CBD3]/15 p-8 sm:p-12 lg:p-16">
+              ${renderSectionHeader({
+                eyebrow: 'INSTITUTIONAL STANDARDS',
+                title: 'CORE VALUES.',
+                description: 'The governing standards that dictate how Echo Forever designs experiences, selects partners, and builds platforms.'
+              })}
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                ${[
+                  { name: 'Intentional Excellence', detail: 'Every detail—from how a room is curated to how a partnership is structured—reflects discipline, craftsmanship, and respect.' },
+                  { name: 'Relationship Integrity', detail: 'We value long-term trust over short-term gain. Our network is built on mutual contribution and discretion.' },
+                  { name: 'Cultural Authenticity', detail: 'We honor the creative voices and communities that drive cultural momentum, ensuring authenticity is never diluted.' },
+                  { name: 'Institutional Discipline', detail: 'We pair bold creative vision with structured governance, clear communication, and reliable execution.' },
+                  { name: 'Collaborative Ambition', detail: 'We believe the most meaningful breakthroughs occur when diverse disciplines and perspectives converge.' },
+                  { name: 'Accountable Stewardship', detail: 'Success carries an obligation to uplift communities, expand educational access, and empower the next generation.' }
+                ].map((val, idx) => `
+                  <div class="border-t border-[#C6CBD3]/20 pt-5 space-y-2">
+                    <div class="text-xs font-mono text-[#78BCEB]">0${idx + 1}</div>
+                    <h3 class="font-serif text-2xl text-white">${val.name}</h3>
+                    <p class="text-sm text-[#8993A3] leading-relaxed">${val.detail}</p>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <div class="space-y-10">
+              ${renderSectionHeader({
+                eyebrow: 'LEADERSHIP & GOVERNANCE',
+                title: 'ARCHITECTS OF THE VISION.',
+                description: 'Echo Forever LLC is structured with a flexible executive and advisory framework designed to scale alongside our divisions.'
+              })}
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div data-aos="fade-right" class="p-8 rounded-2xl glass-panel border-l-2 border-l-[#B9DDF7] space-y-4">
+                  <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#B9DDF7]">FOUNDING LEADERSHIP</div>
+                  <h3 class="font-serif text-2xl text-white">Office of the Founder & Managing Principal</h3>
+                  <p class="text-sm text-[#C6CBD3] leading-relaxed">
+                    Sets the overarching institutional strategy, brand stewardship, capital allocation roadmap, and cross-division alignment across Echo Forever LLC.
+                  </p>
+                </div>
+                <div data-aos="fade-up" class="p-8 rounded-2xl glass-panel space-y-4">
+                  <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#C6CBD3]">DIVISION STEWARDSHIP</div>
+                  <h3 class="font-serif text-2xl text-white">Platform & Programming Directors</h3>
+                  <p class="text-sm text-[#C6CBD3] leading-relaxed">
+                    Dedicated operational leadership overseeing curated gatherings within Echo Experiences, editorial curation for Echo Journal, and community architecture.
+                  </p>
+                </div>
+                <div data-aos="fade-left" class="p-8 rounded-2xl glass-panel space-y-4">
+                  <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#C7AD7A]">STRATEGIC ADVISORY COUNCIL</div>
+                  <h3 class="font-serif text-2xl text-white">Industry, Cultural & Impact Advisors</h3>
+                  <p class="text-sm text-[#C6CBD3] leading-relaxed">
+                    An evolving council of senior operators, cultural leaders, and philanthropic partners providing domain guidance as new platforms activate.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // --- VIEW 3: OUR ECOSYSTEM ---
+    function getEcosystemHTML() {
+      const listHTML = ECOSYSTEM_PILLARS.map((pillar, idx) => {
+        const isFoundation = pillar.id === 'foundation';
+        return `
+          <div
+            data-aos="${idx % 2 === 0 ? 'fade-right' : 'fade-left'}"
+            class="rounded-3xl overflow-hidden border transition-all ${
+              isFoundation ? 'glass-panel-gold border-[#C7AD7A]/35' : 'glass-panel border-[#C6CBD3]/15'
+            }"
+          >
+            <div class="grid grid-cols-1 lg:grid-cols-12">
+              <div class="lg:col-span-5 relative min-h-[280px]">
+                <img src="${pillar.image}" alt="${pillar.title}" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#080B12]/90 hidden lg:block"></div>
+                <div class="absolute top-6 left-6 px-3.5 py-1.5 rounded-full bg-[#080B12]/80 border border-white/15 text-xs font-mono text-[#B9DDF7]">
+                  PILLAR ${pillar.number}
+                </div>
+              </div>
+
+              <div class="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between space-y-6">
+                <div class="space-y-4">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <span class="text-xs font-mono uppercase tracking-[0.2em] ${
+                      isFoundation ? 'text-[#C7AD7A]' : 'text-[#B9DDF7]'
+                    }">
+                      ${pillar.number} • ${pillar.category}
+                    </span>
+                  </div>
+                  <h2 class="font-serif text-3xl sm:text-4xl text-white">${pillar.title}</h2>
+                  <p class="text-sm sm:text-base text-[#C6CBD3] leading-relaxed">${pillar.longDescription}</p>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
+                    ${pillar.highlights.map(h => `
+                      <div class="flex items-center gap-2 text-xs text-[#C6CBD3]">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 ${isFoundation ? 'text-[#C7AD7A]' : 'text-[#78BCEB]'}"></i>
+                        <span>${h}</span>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+
+                <div class="pt-4 border-t border-[#C6CBD3]/15 flex flex-wrap items-center justify-between gap-4">
+                  <span class="text-xs italic text-[#8993A3]">${pillar.subtitle}</span>
+                  <button
+                    onclick="navigateTo('${pillar.id}')"
+                    class="magnetic-btn inline-flex items-center gap-2 rounded-full px-6 py-3 text-xs uppercase tracking-[0.16em] font-medium cursor-pointer ${
+                      isFoundation
+                        ? 'bg-gradient-to-r from-[#C7AD7A] to-[#DFC89B] text-[#080B12]'
+                        : 'bg-gradient-to-r from-[#B9DDF7] via-[#96CCF3] to-[#78BCEB] text-[#080B12]'
+                    }"
+                  >
+                    <span>Enter ${pillar.title}</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      return `
+        <div class="py-16 lg:py-24">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+            <div data-aos="fade-down" class="max-w-4xl">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-xs uppercase tracking-[0.2em] text-[#B9DDF7] mb-6">
+                <span>HOUSE OF BRANDS ARCHITECTURE</span>
+              </div>
+              <h1 class="font-serif text-4xl sm:text-6xl text-white tracking-tight leading-[1.08]">
+                Five Interconnected Platforms. One Institutional Standard.
+              </h1>
+              <p class="mt-6 text-lg text-[#C6CBD3] leading-relaxed">
+                Explore how each division of Echo Forever LLC contributes to our long-term mission—from our active launch engine in Echo Experiences to our expanding community, venture, editorial, and philanthropic pillars.
+              </p>
+            </div>
+            <div class="space-y-8">
+              ${listHTML}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // --- VIEW 4: ECHO EXPERIENCES ---
+    function getExperiencesHTML() {
+      const categories = ['All', 'Private Dinner & Dialogue', 'Executive Forum', 'Philanthropic Gathering'];
+      const filteredEvents = state.experiencesFilter === 'All'
+        ? UPCOMING_EXPERIENCES
+        : UPCOMING_EXPERIENCES.filter(e => e.category === state.experiencesFilter);
+
+      return `
+        <div class="py-16 lg:py-24">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+              <div data-aos="fade-right" class="lg:col-span-8 space-y-6">
+                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#B9DDF7]/15 border border-[#B9DDF7]/40 text-xs uppercase tracking-[0.2em] text-[#B9DDF7]">
+                  <span class="w-2 h-2 rounded-full bg-[#B9DDF7] animate-pulse"></span>
+                  <span>PILLAR 01 • CURATED GATHERINGS & FORUMS</span>
+                </div>
+                <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.05]">
+                  ECHO EXPERIENCES
+                </h1>
+                <p class="font-serif italic text-2xl text-[#B9DDF7]">
+                  Culture, Connections & Experiences.
+                </p>
+                <p class="text-base sm:text-lg text-[#C6CBD3] leading-relaxed max-w-3xl">
+                  Echo Experiences is the flagship active launchpad of Echo Forever. We design and host curated gatherings—from private executive dinners and cultural salons to strategic conferences—that bring extraordinary people into the same room.
+                </p>
+              </div>
+
+              <div data-aos="fade-left" class="lg:col-span-4 flex lg:justify-end">
+                <button onclick="navigateTo('contact', { inquiryCategory: 'Experiences & Sponsorships' })" class="magnetic-btn inline-flex items-center gap-2.5 rounded-full px-7 py-3.5 text-sm bg-gradient-to-r from-[#B9DDF7] via-[#96CCF3] to-[#78BCEB] text-[#080B12] font-medium cursor-pointer">
+                  <span>Inquire About Sponsorships</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              ${[
+                { title: 'Private Dinners', desc: 'Intimate, moderated culinary tables for 15–30 leaders designed for candid dialogue and deep relationship building.' },
+                { title: 'Corporate Gatherings', desc: 'Bespoke receptions and executive roundtables convening operators, partners, and institutional decision-makers.' },
+                { title: 'Cultural Events', desc: 'High-craft evenings celebrating art, media, music, architecture, and the creative vanguard.' },
+                { title: 'Strategic Conferences', desc: 'Flagship forums featuring keynotes, panels, and curated networking at the intersection of culture and capital.' }
+              ].map((item, i) => `
+                <div data-aos="fade-up" style="transition-delay: ${i * 75}ms" class="p-6 rounded-2xl glass-panel space-y-3">
+                  <div class="text-xs font-mono text-[#B9DDF7]">FORMAT / 0${i + 1}</div>
+                  <h3 class="font-serif text-2xl text-white">${item.title}</h3>
+                  <p class="text-xs sm:text-sm text-[#8993A3] leading-relaxed">${item.desc}</p>
+                </div>
+              `).join('')}
+            </div>
+
+            <div class="space-y-8">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#C6CBD3]/15 pb-6">
+                <div>
+                  <h2 class="font-serif text-3xl sm:text-4xl text-white">Curated Programming & Gatherings</h2>
+                  <p class="text-sm text-[#8993A3] mt-1">
+                    Select an experience below to review the briefing, agenda, and request registration or sponsorship credentials.
+                  </p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  ${categories.map(cat => `
+                    <button
+                      onclick="setExperiencesFilter('${cat}')"
+                      class="px-3.5 py-1.5 rounded-full text-xs transition-all cursor-pointer ${
+                        state.experiencesFilter === cat
+                          ? 'bg-[#B9DDF7] text-[#080B12] font-semibold'
+                          : 'bg-[#101827] text-[#C6CBD3] border border-[#C6CBD3]/20 hover:border-[#B9DDF7]/40'
+                      }"
+                    >
+                      ${cat}
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                ${filteredEvents.map(ev => `
+                  <div class="rounded-2xl overflow-hidden glass-panel flex flex-col justify-between group hover:border-[#B9DDF7]/50 transition-all">
+                    <div>
+                      <div class="relative h-56 overflow-hidden">
+                        <img src="${ev.image}" alt="${ev.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#080B12] via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.16em] px-3 py-1 rounded-full bg-[#080B12]/85 text-[#B9DDF7] border border-[#B9DDF7]/30">
+                          ${ev.category}
+                        </span>
+                      </div>
+                      <div class="p-6 space-y-4">
+                        <div class="space-y-1.5 text-xs text-[#8993A3]">
+                          <div class="flex items-center gap-2">
+                            <i data-lucide="calendar" class="w-3.5 h-3.5 text-[#B9DDF7]"></i>
+                            <span>${ev.timing}</span>
+                          </div>
+                          <div class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#B9DDF7]"></i>
+                            <span>${ev.location}</span>
+                          </div>
+                        </div>
+                        <h3 class="font-serif text-2xl text-white leading-snug">${ev.title}</h3>
+                        <p class="text-sm text-[#C6CBD3] leading-relaxed">${ev.summary}</p>
+                      </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                      <button
+                        onclick="openEventModal('${ev.id}')"
+                        class="w-full py-3 px-4 rounded-xl bg-[#B9DDF7]/15 hover:bg-[#B9DDF7] text-[#B9DDF7] hover:text-[#080B12] border border-[#B9DDF7]/30 text-xs uppercase tracking-[0.18em] font-medium transition-all flex items-center justify-center gap-2 cursor-pointer"
+                      >
+                        <span>Event Details & RSVP Request</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                      </button>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // --- VIEW 5: ECHO COLLECTIVE ---
+    function getCollectiveHTML() {
+      return `
+        <div class="py-16 lg:py-24">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+            <div data-aos="fade-down" class="max-w-4xl space-y-6">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-xs uppercase tracking-[0.2em] text-[#78BCEB]">
+                <span>PILLAR 02 • PRIVATE NETWORK & COMMUNITY</span>
+              </div>
+              <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.05]">
+                ECHO COLLECTIVE
+              </h1>
+              <p class="font-serif italic text-2xl text-[#B9DDF7]">
+                Relationships That Create Possibilities.
+              </p>
+              <p class="text-base sm:text-lg text-[#C6CBD3] leading-relaxed">
+                Echo Collective is our curated community and future membership architecture. Designed for founders, executives, cultural leaders, and builders, the Collective fosters deliberate connections that extend far beyond a single evening.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              ${[
+                { title: 'Curated Peer Alignment', desc: 'Every prospective member is considered based on character, accomplishment, collaborative spirit, and commitment to long-term impact.' },
+                { title: 'Private Gatherings & Briefings', desc: 'Priority invitations to intimate Echo Experiences, off-the-record roundtable dialogues, and cultural previews.' },
+                { title: 'Cross-Industry Catalyst', desc: 'Bridging leaders in media, entertainment, finance, technology, corporate governance, and philanthropy.' }
+              ].map((item, i) => `
+                <div data-aos="fade-up" style="transition-delay: ${i * 80}ms" class="p-8 rounded-2xl glass-panel space-y-3">
+                  <div class="text-xs font-mono text-[#78BCEB]">COLLECTIVE PILLAR / 0${i + 1}</div>
+                  <h3 class="font-serif text-2xl text-white">${item.title}</h3>
+                  <p class="text-sm text-[#C6CBD3] leading-relaxed">${item.desc}</p>
+                </div>
+              `).join('')}
+            </div>
+
+            <div class="rounded-3xl glass-panel p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+              <div data-aos="fade-right" class="lg:col-span-5 space-y-4">
+                <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#B9DDF7]">MEMBERSHIP EXPRESSION OF INTEREST</div>
+                <h2 class="font-serif text-3xl sm:text-4xl text-white">Request an Invitation or Nominate a Leader.</h2>
+                <p class="text-sm text-[#C6CBD3] leading-relaxed">
+                  Echo Collective is being introduced in structured phases alongside Echo Experiences. Submit your profile below to be considered for upcoming private gatherings and inaugural membership briefings.
+                </p>
+                <div class="p-4 rounded-xl bg-[#080B12]/70 border border-[#C6CBD3]/15 text-xs text-[#8993A3]">
+                  Note: Echo Collective does not publicly solicit unapproved membership dues during this foundational curation phase. All submissions are reviewed directly by the Echo Forever membership committee.
+                </div>
+              </div>
+
+              <div data-aos="fade-left" id="collective-form-container" class="lg:col-span-7">
+                <form onsubmit="handleCollectiveSubmit(event)" class="space-y-4">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-xs uppercase tracking-[0.16em] text-[#C6CBD3] mb-2">Full Name *</label>
+                      <input id="col-name" type="text" required placeholder="e.g., Jordan Vance" class="w-full px-4 py-3 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]" />
+                    </div>
+                    <div>
+                      <label class="block text-xs uppercase tracking-[0.16em] text-[#C6CBD3] mb-2">Email Address *</label>
+                      <input id="col-email" type="email" required placeholder="name@organization.com" class="w-full px-4 py-3 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]" />
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-xs uppercase tracking-[0.16em] text-[#C6CBD3] mb-2">Company / Institution *</label>
+                      <input id="col-org" type="text" required placeholder="Organization Name" class="w-full px-4 py-3 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]" />
+                    </div>
+                    <div>
+                      <label class="block text-xs uppercase tracking-[0.16em] text-[#C6CBD3] mb-2">Primary Discipline</label>
+                      <select id="col-disc" class="w-full px-4 py-3 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]">
+                        <option>Executive Leadership & Business</option>
+                        <option>Culture, Media & Entertainment</option>
+                        <option>Entrepreneurship & Venture</option>
+                        <option>Philanthropy & Social Impact</option>
+                        <option>Architecture, Design & Arts</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-xs uppercase tracking-[0.16em] text-[#C6CBD3] mb-2">Brief Introduction & Areas of Alignment *</label>
+                    <textarea id="col-note" rows="4" required placeholder="Share a brief overview of your work and how you hope to connect with the Echo Collective..." class="w-full px-4 py-3 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]"></textarea>
+                  </div>
+                  <button type="submit" class="magnetic-btn w-full inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium bg-gradient-to-r from-[#B9DDF7] via-[#96CCF3] to-[#78BCEB] text-[#080B12] cursor-pointer">
+                    <span>Submit Collective Inquiry</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // --- VIEW 6: ECHO VENTURES ---
+    function getVenturesHTML() {
+      return `
+        <div class="py-16 lg:py-24">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+            <div data-aos="fade-down" class="max-w-4xl space-y-6">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-xs uppercase tracking-[0.2em] text-[#C6CBD3]">
+                <span>PILLAR 03 • VENTURE & PARTNERSHIP PLATFORM</span>
+              </div>
+              <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.05]">
+                ECHO VENTURES
+              </h1>
+              <p class="font-serif italic text-2xl text-[#B9DDF7]">
+                Ideas With the Potential to Become Something Greater.
+              </p>
+              <p class="text-base sm:text-lg text-[#C6CBD3] leading-relaxed">
+                Echo Ventures is our platform for entrepreneurship, business development, and strategic partnerships. We collaborate with visionary founders, established brands, and operators to structure initiatives built for long-term commercial durability.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              ${[
+                { title: 'Strategic Co-Ventures', desc: 'Partnering with corporations and cultural leaders to launch joint platforms that leverage shared distribution and brand authority.' },
+                { title: 'Business Development', desc: 'Opening institutional doors, forging commercial alliances, and structuring revenue-generating opportunities across our network.' },
+                { title: 'Concept Incubation', desc: 'Developing internal and partner-aligned business concepts from initial thesis to operational reality.' }
+              ].map((item, i) => `
+                <div data-aos="fade-up" style="transition-delay: ${i * 80}ms" class="p-8 rounded-2xl glass-panel space-y-3">
+                  <div class="text-xs font-mono text-[#B9DDF7]">VENTURE PILLAR / 0${i + 1}</div>
+                  <h3 class="font-serif text-2xl text-white">${item.title}</h3>
+                  <p class="text-sm text-[#C6CBD3] leading-relaxed">${item.desc}</p>
+                </div>
+              `).join('')}
+            </div>
+
+            <div class="rounded-3xl glass-panel p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
+              <div data-aos="fade-right" class="lg:col-span-5 space-y-4">
+                <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#B9DDF7]">PARTNERSHIP & INITIATIVE SUBMISSION</div>
+                <h2 class="font-serif text-3xl sm:text-4xl text-white">Share a Strategic Initiative or Venture Concept.</h2>
+                <p class="text-sm text-[#C6CBD3] leading-relaxed">
+                  We welcome dialogue with founders, executives, and potential partners exploring strategic collaborations or commercial co-ventures aligned with the Echo Forever ecosystem.
+                </p>
+                <div class="p-4 rounded-xl bg-[#080B12]/70 border border-[#C6CBD3]/15 text-xs text-[#8993A3]">
+                  Compliance Notice: Echo Ventures is the business development and strategic partnership arm of Echo Forever LLC. Submissions via this portal are for commercial partnership evaluation and do not constitute regulated securities solicitation.
+                </div>
+              </div>
+
+              <div data-aos="fade-left" id="ventures-form-container" class="lg:col-span-7">
+                <form onsubmit="handleVenturesSubmit(event)" class="space-y-4">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-xs uppercase tracking-[0.16em] text-[#C6CBD3] mb-2">Your Name *</label>
+                      <input id="ven-name" type="text" required class="w-full px-4 py-3 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]" />
+                    </div>
+                    <div>
+                      <label class="block text-xs uppercase tracking-[0.16em] text-[#C6CBD3] mb-2">Email Address *</label>
+                      <input id="ven-email" type="email" required class="w-full px-4 py-3 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]" />
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-xs uppercase tracking-[0.16em] text-[#C6CBD3] mb-2">Entity / Project Name *</label>
+                      <input id="ven-company" type="text" required class="w-full px-4 py-3 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]" />
+                    </div>
+                    <div>
+                      <label class="block text-xs uppercase tracking-[0.16em] text-[#C6CBD3] mb-2">Collaboration Type</label>
+                      <select id="ven-stage" class="w-full px-4 py-3 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]">
+                        <option>Strategic Partnership Proposal</option>
+                        <option>Co-Venture / New Concept</option>
+                        <option>Corporate Business Development</option>
+                        <option>Brand & Ecosystem Alignment</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-xs uppercase tracking-[0.16em] text-[#C6CBD3] mb-2">Executive Summary & Strategic Alignment *</label>
+                    <textarea id="ven-summary" rows="4" required placeholder="Outline the opportunity, key principals, and how it aligns with Echo Forever..." class="w-full px-4 py-3 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]"></textarea>
+                  </div>
+                  <button type="submit" class="magnetic-btn w-full inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium bg-gradient-to-r from-[#B9DDF7] via-[#96CCF3] to-[#78BCEB] text-[#080B12] cursor-pointer">
+                    <span>Submit to Echo Ventures Desk</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // --- VIEW 7: ECHO JOURNAL ---
+    function getJournalHTML() {
+      const categories = ['All', 'Institutional Dispatch', 'Echo Experiences', 'Echo Foundation', 'Ventures & Strategy'];
+      const filtered = JOURNAL_ARTICLES.filter(art => {
+        const matchesCat = state.journalCategory === 'All' || art.category === state.journalCategory;
+        const q = state.journalSearch.toLowerCase();
+        const matchesSearch = !q || art.title.toLowerCase().includes(q) || art.excerpt.toLowerCase().includes(q);
+        return matchesCat && matchesSearch;
+      });
+
+      return `
+        <div class="py-16 lg:py-24">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            <div data-aos="fade-down" class="max-w-4xl space-y-6">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-xs uppercase tracking-[0.2em] text-[#B9DDF7]">
+                <span>PILLAR 04 • EDITORIAL & CULTURAL INTELLIGENCE</span>
+              </div>
+              <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.05]">
+                ECHO JOURNAL
+              </h1>
+              <p class="font-serif italic text-2xl text-[#B9DDF7]">
+                Ideas, Perspectives & Influence.
+              </p>
+              <p class="text-base sm:text-lg text-[#C6CBD3] leading-relaxed">
+                The editorial publication of Echo Forever LLC—documenting essays, institutional announcements, leadership dialogues, and cultural perspectives.
+              </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 pb-6 border-b border-[#C6CBD3]/15">
+              <div class="flex flex-wrap gap-2">
+                ${categories.map(cat => `
+                  <button
+                    onclick="setJournalCategory('${cat}')"
+                    class="px-4 py-2 rounded-full text-xs transition-all cursor-pointer ${
+                      state.journalCategory === cat
+                        ? 'bg-[#B9DDF7] text-[#080B12] font-semibold'
+                        : 'bg-[#101827] text-[#C6CBD3] border border-[#C6CBD3]/20 hover:border-[#B9DDF7]/40'
+                    }"
+                  >
+                    ${cat}
+                  </button>
+                `).join('')}
+              </div>
+
+              <div class="relative min-w-[280px]">
+                <i data-lucide="search" class="w-4 h-4 text-[#8993A3] absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                <input
+                  type="text"
+                  value="${state.journalSearch}"
+                  oninput="handleJournalSearch(this.value)"
+                  placeholder="Search articles & dispatches..."
+                  class="w-full pl-10 pr-4 py-2.5 rounded-full bg-[#101827] border border-[#C6CBD3]/20 text-xs text-white focus:outline-none focus:border-[#B9DDF7]"
+                />
+              </div>
+            </div>
+
+            <div id="journal-articles-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              ${filtered.map(art => `
+                <article
+                  onclick="openArticleModal('${art.id}')"
+                  class="group rounded-2xl overflow-hidden glass-panel hover:border-[#B9DDF7]/50 transition-all cursor-pointer flex flex-col justify-between"
+                >
+                  <div>
+                    <div class="relative h-64 overflow-hidden">
+                      <img src="${art.image}" alt="${art.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                      <div class="absolute inset-0 bg-gradient-to-t from-[#080B12] via-transparent to-transparent"></div>
+                      <span class="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.18em] px-3 py-1 rounded-full bg-[#080B12]/80 text-[#B9DDF7] border border-[#B9DDF7]/30">
+                        ${art.category}
+                      </span>
+                    </div>
+                    <div class="p-8 space-y-3">
+                      <div class="text-xs text-[#8993A3]">
+                        ${art.date} • ${art.readTime} • By ${art.author}
+                      </div>
+                      <h2 class="font-serif text-2xl sm:text-3xl text-white group-hover:text-[#B9DDF7] transition-colors">
+                        ${art.title}
+                      </h2>
+                      <p class="text-sm text-[#C6CBD3] leading-relaxed">${art.excerpt}</p>
+                    </div>
+                  </div>
+                  <div class="px-8 pb-8 flex items-center justify-between text-xs uppercase tracking-[0.18em] text-[#B9DDF7]">
+                    <span>Read Full Article</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  </div>
+                </article>
+              `).join('')}
+            </div>
+
+            <div class="rounded-3xl glass-panel p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div class="space-y-2 max-w-xl">
+                <div class="text-xs font-mono uppercase tracking-[0.2em] text-[#B9DDF7]">ECHO JOURNAL DISPATCH</div>
+                <h3 class="font-serif text-3xl text-white">Receive Institutional Perspectives & Event Announcements.</h3>
+                <p class="text-sm text-[#8993A3]">
+                  Delivered selectively when new essays, gathering dates, or ecosystem milestones are published.
+                </p>
+              </div>
+              <div id="newsletter-box" class="w-full lg:w-auto">
+                <form onsubmit="handleNewsletterSubmit(event)" class="flex w-full lg:w-auto gap-3">
+                  <input
+                    type="email"
+                    required
+                    placeholder="Enter your email address"
+                    class="flex-1 lg:w-72 px-4 py-3 rounded-full bg-[#080B12] border border-[#C6CBD3]/25 text-sm text-white focus:outline-none focus:border-[#B9DDF7]"
+                  />
+                  <button type="submit" class="magnetic-btn rounded-full px-6 py-3 text-sm font-medium bg-gradient-to-r from-[#B9DDF7] via-[#96CCF3] to-[#78BCEB] text-[#080B12] cursor-pointer">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // --- VIEW 8: ECHO FOUNDATION (CHAMPAGNE GOLD #C7AD7A IDENTITY) ---
+    function getFoundationHTML() {
+      return `
+        <div class="py-16 lg:py-24">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+            <div data-aos="fade-down" class="max-w-4xl space-y-6">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C7AD7A]/15 border border-[#C7AD7A]/40 text-xs uppercase tracking-[0.2em] text-[#C7AD7A]">
+                <span>PILLAR 05 • PHILANTHROPY & SOCIAL IMPACT</span>
+              </div>
+              <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.05]">
+                ECHO FOUNDATION
+              </h1>
+              <p class="font-serif italic text-2xl text-[#C7AD7A]">
+                Building a Greater Tomorrow.
+              </p>
+              <p class="text-base sm:text-lg text-[#C6CBD3] leading-relaxed">
+                At Echo Forever, our responsibility extends beyond the commercial opportunities we create. Echo Foundation is our long-term philanthropic and social-impact vision—dedicated to community development, education, youth leadership, and sustainable progress with a special focus on Haiti.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              ${[
+                { title: 'Community Development', desc: 'Partnering with local leaders and organizations to strengthen neighborhood infrastructure, civic resilience, and economic dignity.' },
+                { title: 'Educational Access & Resources', desc: 'Expanding access to learning tools, scholarship pathways, and modern educational environments for underserved students.' },
+                { title: 'Youth Leadership & Mentorship', desc: 'Equipping the next generation with mentorship, creative confidence, and exposure to entrepreneurship and leadership.' },
+                { title: 'Strategic Focus on Haiti', desc: 'A foundational, long-term commitment to supporting educational, youth, and community empowerment initiatives across Haiti.' }
+              ].map((item, i) => `
+                <div data-aos="fade-up" style="transition-delay: ${i * 80}ms" class="p-8 rounded-2xl glass-panel-gold space-y-3">
+                  <div class="text-xs font-mono text-[#C7AD7A]">IMPACT PILLAR / 0${i + 1}</div>
+                  <h3 class="font-serif text-2xl sm:text-3xl text-white">${item.title}</h3>
+                  <p class="text-sm text-[#C6CBD3] leading-relaxed">${item.desc}</p>
+                </div>
+              `).join('')}
+            </div>
+
+            <div data-aos="zoom-in" class="rounded-3xl glass-panel-gold p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div class="lg:col-span-7 space-y-5">
+                <div class="text-xs font-mono uppercase tracking-[0.22em] text-[#C7AD7A]">PHASED STEWARDSHIP ROADMAP</div>
+                <h2 class="font-serif text-3xl sm:text-4xl text-white">Partnering for Sustainable Impact.</h2>
+                <p class="text-sm sm:text-base text-[#C6CBD3] leading-relaxed">
+                  In accordance with Echo Forever’s strategic launch sequence, proceeds and institutional momentum generated by Echo Experiences will help catalyze the formal programming of Echo Foundation. We are actively connecting with NGOs, educational leaders, community stewards, and prospective volunteers.
+                </p>
+                <p class="text-xs text-[#8993A3]">
+                  Transparency Note: Public online donation processing will only be activated once all applicable charitable registrations and operational frameworks are formally completed.
+                </p>
+              </div>
+
+              <div class="lg:col-span-5 flex flex-col gap-4">
+                <button
+                  onclick="navigateTo('contact', { inquiryCategory: 'Foundation Partnerships' })"
+                  class="magnetic-btn w-full inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium bg-gradient-to-r from-[#C7AD7A] to-[#DFC89B] text-[#080B12] cursor-pointer"
+                >
+                  <span>Inquire About Foundation Partnerships</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </button>
+                <button
+                  onclick="navigateTo('contact', { inquiryCategory: 'Foundation Partnerships' })"
+                  class="magnetic-btn w-full inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm bg-[#101827]/70 text-white border border-[#C6CBD3]/25 hover:border-[#C7AD7A]/60 cursor-pointer"
+                >
+                  <span>Volunteer & Community Alignment</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // --- VIEW 9: CONTACT & SEGMENTED INQUIRY ROUTING ---
+    function getContactHTML() {
+      const categories = [
+        'Business Partnerships',
+        'Corporate Development',
+        'Experiences & Sponsorships',
+        'Collective Membership',
+        'Foundation Partnerships',
+        'Media & Press',
+        'General Correspondence'
+      ];
+
+      return `
+        <div class="py-6 sm:py-8 lg:py-10 min-h-[calc(100vh-4rem)] flex items-center">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
+              <!-- Left Column: Compact Corporate Header & Routing Directory -->
+              <div data-aos="fade-right" class="lg:col-span-5 space-y-4 sm:space-y-5">
+                <div>
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel text-[11px] uppercase tracking-[0.2em] text-[#B9DDF7] mb-3">
+                    <span>CORPORATE COMMUNICATIONS</span>
+                  </div>
+                  <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.06]">
+                    Connect With Echo Forever.
+                  </h1>
+                  <p class="mt-2.5 text-sm text-[#C6CBD3] leading-relaxed">
+                    Select an inquiry category to route your correspondence directly to the appropriate division desk within Echo Forever LLC.
+                  </p>
+                </div>
+
+                <div class="hidden sm:grid grid-cols-1 gap-3.5">
+                  <div class="p-4 sm:p-5 rounded-2xl glass-panel space-y-1.5">
+                    <div class="text-[11px] font-mono uppercase tracking-[0.2em] text-[#B9DDF7]">DIRECT CORRESPONDENCE</div>
+                    <div class="text-base font-medium text-white">ECHO FOREVER LLC</div>
+                    <p class="text-xs text-[#8993A3]">
+                      All digital inquiries are encrypted and routed to the Echo Forever executive desk.
+                    </p>
+                  </div>
+
+                  <div class="p-4 sm:p-5 rounded-2xl glass-panel space-y-2">
+                    <div class="text-[11px] font-mono uppercase tracking-[0.2em] text-[#C6CBD3]">ROUTING DESKS</div>
+                    <ul class="space-y-1.5 text-xs text-[#8993A3]">
+                      <li><strong class="text-white">Echo Experiences:</strong> Event invitations, private tables & corporate sponsorships.</li>
+                      <li><strong class="text-white">Echo Collective:</strong> Membership nominations & community alignment.</li>
+                      <li><strong class="text-white">Echo Ventures:</strong> Strategic partnerships & business development.</li>
+                      <li><strong class="text-[#C7AD7A]">Echo Foundation:</strong> Community, educational & Haiti impact partnerships.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Above-the-Fold Segmented Inquiry Form -->
+              <div data-aos="fade-left" class="lg:col-span-7">
+                <div id="contact-form-card" class="rounded-3xl glass-panel p-5 sm:p-7 lg:p-8">
+                  <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                    <div>
+                      <label class="block text-[11px] uppercase tracking-[0.18em] text-[#C6CBD3] mb-2">Select Inquiry Category *</label>
+                      <div id="contact-cat-pills" class="flex flex-wrap gap-1.5">
+                        ${categories.map(cat => `
+                          <button
+                            type="button"
+                            onclick="selectContactCategory('${cat}')"
+                            data-cat="${cat}"
+                            class="px-3 py-1.5 rounded-lg text-[11px] transition-all cursor-pointer border ${
+                              state.inquiryCategory === cat
+                                ? 'bg-[#B9DDF7] text-[#080B12] border-[#B9DDF7] font-semibold'
+                                : 'bg-[#080B12]/70 text-[#C6CBD3] border-[#C6CBD3]/20 hover:border-[#B9DDF7]/50'
+                            }"
+                          >
+                            ${cat}
+                          </button>
+                        `).join('')}
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                      <div>
+                        <label class="block text-[11px] uppercase tracking-[0.16em] text-[#C6CBD3] mb-1.5">Full Name *</label>
+                        <input id="cnt-name" type="text" required placeholder="Your full name" class="w-full px-3.5 py-2.5 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]" />
+                      </div>
+                      <div>
+                        <label class="block text-[11px] uppercase tracking-[0.16em] text-[#C6CBD3] mb-1.5">Email Address *</label>
+                        <input id="cnt-email" type="email" required placeholder="you@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]" />
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                      <div>
+                        <label class="block text-[11px] uppercase tracking-[0.16em] text-[#C6CBD3] mb-1.5">Company / Organization</label>
+                        <input id="cnt-org" type="text" placeholder="Organization or Title" class="w-full px-3.5 py-2.5 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]" />
+                      </div>
+                      <div>
+                        <label class="block text-[11px] uppercase tracking-[0.16em] text-[#C6CBD3] mb-1.5">Subject *</label>
+                        <input id="cnt-subject" type="text" required placeholder="Brief subject line" class="w-full px-3.5 py-2.5 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label class="block text-[11px] uppercase tracking-[0.16em] text-[#C6CBD3] mb-1.5">Message & Inquiry Details *</label>
+                      <textarea id="cnt-message" rows="3" required placeholder="Please share context regarding your inquiry, partnership concept, or event interest..." class="w-full px-3.5 py-2.5 rounded-xl bg-[#080B12]/90 border border-[#C6CBD3]/20 text-sm text-white focus:outline-none focus:border-[#B9DDF7]"></textarea>
+                    </div>
+
+                    <div class="flex items-start gap-2.5 text-[11px] text-[#8993A3]">
+                      <input type="checkbox" required checked class="mt-0.5 rounded border-[#C6CBD3]/30" />
+                      <span>
+                        I consent to Echo Forever LLC processing this information for the purpose of responding to my inquiry in accordance with the Privacy Policy.
+                      </span>
+                    </div>
+
+                    <button id="cnt-submit-btn" type="submit" class="magnetic-btn w-full inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-medium bg-gradient-to-r from-[#B9DDF7] via-[#96CCF3] to-[#78BCEB] text-[#080B12] cursor-pointer">
+                      <span>Transmit Inquiry to Echo Forever</span>
+                      <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // ==========================================================================
+    // 5. NAVIGATION, ROUTING & INTERACTION CONTROLLERS
+    // ==========================================================================
+    function renderNavigation() {
+      const isFoundationPage = state.activePage === 'foundation';
+
+      // Update Header Monogram & CTA accent for Foundation page
+      const monogramBox = document.getElementById('header-monogram');
+      const monogramAccent = document.getElementById('header-monogram-accent');
+      const headerCta = document.getElementById('header-cta-btn');
+
+      if (monogramBox && monogramAccent) {
+        monogramBox.className = `w-10 h-10 relative inline-flex items-center justify-center rounded-lg border transition-all duration-500 shadow-inner ${
+          isFoundationPage
+            ? 'border-[#C7AD7A]/40 bg-[#C7AD7A]/10 text-[#C7AD7A]'
+            : 'border-[#B9DDF7]/30 bg-[#101827]/90 text-white'
+        }`;
+        monogramAccent.setAttribute('stroke', isFoundationPage ? '#C7AD7A' : '#B9DDF7');
+      }
+
+      if (headerCta) {
+        headerCta.className = `magnetic-btn group relative inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-xs uppercase tracking-[0.14em] font-medium border cursor-pointer ${
+          isFoundationPage
+            ? 'bg-gradient-to-r from-[#C7AD7A] to-[#DFC89B] text-[#080B12] border-white/30 shadow-[0_0_25px_rgba(199,173,122,0.2)]'
+            : 'bg-gradient-to-r from-[#B9DDF7] via-[#96CCF3] to-[#78BCEB] text-[#080B12] border-white/40 shadow-[0_0_30px_rgba(185,221,247,0.18)]'
+        }`;
+      }
+
+      // Desktop Nav
+      const desktopNav = document.getElementById('desktop-nav');
+      if (desktopNav) {
+        desktopNav.innerHTML = NAV_ITEMS.map(item => {
+          const isActive = state.activePage === item.id;
+          const isFound = item.id === 'foundation';
+          return `
+            <button
+              onclick="navigateTo('${item.id}')"
+              class="relative px-3.5 py-2 rounded-full text-xs tracking-[0.12em] uppercase transition-all cursor-pointer ${
+                isActive
+                  ? isFound
+                    ? 'text-[#C7AD7A] bg-[#C7AD7A]/10 font-medium'
+                    : 'text-[#B9DDF7] bg-[#B9DDF7]/10 font-medium'
+                  : 'text-[#C6CBD3] hover:text-white hover:bg-[#171D29]/60'
+              }"
+            >
+              ${item.label}
+              ${isActive ? `<span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-[2px] rounded-full ${isFound ? 'bg-[#C7AD7A]' : 'bg-[#B9DDF7]'}"></span>` : ''}
+            </button>
+          `;
+        }).join('');
+      }
+
+      // Mobile Nav
+      const mobileList = document.getElementById('mobile-nav-list');
+      if (mobileList) {
+        const homeActive = state.activePage === 'home';
+        mobileList.innerHTML = `
+          <div class="text-[11px] uppercase tracking-[0.24em] text-[#8993A3] mb-4">Institutional Directory</div>
+          <button
+            onclick="navigateTo('home')"
+            class="w-full flex items-center justify-between py-3.5 px-4 rounded-xl text-left border transition-all cursor-pointer ${
+              homeActive ? 'border-[#B9DDF7]/40 bg-[#101827] text-[#B9DDF7]' : 'border-transparent text-white hover:bg-[#101827]/60'
+            }"
+          >
+            <span class="font-serif text-2xl">Home Gateway</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          ${NAV_ITEMS.map(item => {
+            const isActive = state.activePage === item.id;
+            const isFound = item.id === 'foundation';
+            return `
+              <button
+                onclick="navigateTo('${item.id}')"
+                class="w-full flex items-center justify-between py-3.5 px-4 rounded-xl text-left border transition-all cursor-pointer ${
+                  isActive
+                    ? isFound
+                      ? 'border-[#C7AD7A]/40 bg-[#101827] text-[#C7AD7A]'
+                      : 'border-[#B9DDF7]/40 bg-[#101827] text-[#B9DDF7]'
+                    : 'border-transparent text-white hover:bg-[#101827]/60'
+                }"
+              >
+                <span class="font-serif text-2xl">${item.label}</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 opacity-70"></i>
+              </button>
+            `;
+          }).join('')}
+        `;
+      }
+    }
+
+    function navigateTo(page, options = {}) {
+      if (options.inquiryCategory) {
+        state.inquiryCategory = options.inquiryCategory;
+      }
+      state.activePage = page;
+      state.mobileMenuOpen = false;
+
+      const overlay = document.getElementById('mobile-menu-overlay');
+      if (overlay) overlay.classList.add('hidden');
+
+      renderApp();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleMobileMenu() {
+      state.mobileMenuOpen = !state.mobileMenuOpen;
+      const overlay = document.getElementById('mobile-menu-overlay');
+      const btn = document.getElementById('mobile-menu-btn');
+      if (overlay) {
+        overlay.classList.toggle('hidden', !state.mobileMenuOpen);
+      }
+      if (btn) {
+        btn.innerHTML = `<i data-lucide="${state.mobileMenuOpen ? 'x' : 'menu'}" class="w-5 h-5"></i>`;
+        lucide.createIcons();
+      }
+    }
+
+    function renderApp() {
+      renderNavigation();
+      const container = document.getElementById('app-view');
+      if (!container) return;
+
+      switch (state.activePage) {
+        case 'home':
+          container.innerHTML = getHomeHTML();
+          startHeroAnimations();
+          break;
+        case 'about':
+          container.innerHTML = getAboutHTML();
+          break;
+        case 'ecosystem':
+          container.innerHTML = getEcosystemHTML();
+          break;
+        case 'experiences':
+          container.innerHTML = getExperiencesHTML();
+          break;
+        case 'collective':
+          container.innerHTML = getCollectiveHTML();
+          break;
+        case 'ventures':
+          container.innerHTML = getVenturesHTML();
+          break;
+        case 'journal':
+          container.innerHTML = getJournalHTML();
+          break;
+        case 'foundation':
+          container.innerHTML = getFoundationHTML();
+          break;
+        case 'contact':
+          container.innerHTML = getContactHTML();
+          break;
+        default:
+          container.innerHTML = getHomeHTML();
+      }
+
+      lucide.createIcons();
+      initAOS();
+      initKineticScrollObserver();
+      initMagneticButtons();
+      initSpotlightCards();
+    }
+
+    // ==========================================================================
+    // 6. KINETIC HEADLINE & CYBERPUNK CIPHER DECRYPTION ENGINE
+    // ==========================================================================
+    function startHeroAnimations() {
+      // Trigger Cyberpunk Cipher Decryption Tagline on Hero
+      startCipherEffect();
+    }
+
+    function startCipherEffect() {
+      const el = document.getElementById('hero-cipher-text');
+      if (!el) return;
+
+      const targetText = 'Building connections, creating opportunities, and developing ideas that shape what comes next.';
+      const glyphs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/\\|<>[]{}—•*+=';
+
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        el.textContent = targetText;
+        return;
+      }
+
+      if (cipherInterval) clearInterval(cipherInterval);
+      let iteration = 0;
+
+      cipherInterval = setInterval(() => {
+        el.textContent = targetText
+          .split('')
+          .map((char, idx) => {
+            if (char === ' ' || char === ',' || char === '.') return char;
+            if (idx < iteration) return targetText[idx];
+            return glyphs[Math.floor(Math.random() * glyphs.length)];
+          })
+          .join('');
+
+        iteration += 1.25;
+        if (iteration >= targetText.length) {
+          el.textContent = targetText;
+          clearInterval(cipherInterval);
+        }
+      }, 26);
+    }
+
+    // ==========================================================================
+    // 7. DATA-AOS SCROLL INTERSECTION OBSERVER
+    // ==========================================================================
+    function initAOS() {
+      if (aosObserver) aosObserver.disconnect();
+
+      const elements = document.querySelectorAll('[data-aos]');
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        elements.forEach(el => el.classList.add('aos-animate'));
+        return;
+      }
+
+      aosObserver = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('aos-animate');
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      elements.forEach(el => {
+        el.classList.remove('aos-animate');
+        aosObserver.observe(el);
+      });
+    }
+
+    // ==========================================================================
+    // 7B. DEDICATED SCROLL-TRIGGERED KINETIC TYPOGRAPHY OBSERVER
+    // ==========================================================================
+    let kineticObserver = null;
+
+    function initKineticScrollObserver() {
+      if (kineticObserver) kineticObserver.disconnect();
+
+      const targets = document.querySelectorAll('.kinetic-scroll-target');
+      if (!targets.length) return;
+
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        targets.forEach(target => {
+          target.querySelectorAll('.kinetic-char').forEach(ch => ch.classList.add('revealed'));
+        });
+        return;
+      }
+
+      kineticObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const chars = entry.target.querySelectorAll('.kinetic-char');
+              chars.forEach(ch => ch.classList.add('revealed'));
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.25, rootMargin: '0px 0px -60px 0px' }
+      );
+
+      targets.forEach(target => {
+        target.querySelectorAll('.kinetic-char').forEach(ch => ch.classList.remove('revealed'));
+        kineticObserver.observe(target);
+      });
+    }
+
+    // ==========================================================================
+    // 8. MAGNETIC CTA BUTTON INTERACTION (DESKTOP)
+    // ==========================================================================
+    function initMagneticButtons() {
+      if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
+
+      const buttons = document.querySelectorAll('.magnetic-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('mousemove', e => {
+          const rect = btn.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          const dx = Math.max(-10, Math.min(10, (e.clientX - cx) * 0.18));
+          const dy = Math.max(-6, Math.min(6, (e.clientY - cy) * 0.18));
+          btn.style.transform = `translate3d(${dx}px, ${dy}px, 0)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transform = 'translate3d(0, 0, 0)';
+        });
+      });
+    }
+
+    // Interactive Cursor Spotlight Tracking for Bento & Glass Cards
+    function initSpotlightCards() {
+      if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
+
+      const cards = document.querySelectorAll('.spotlight-card, .glass-panel, .glass-panel-gold');
+      cards.forEach(card => {
+        card.classList.add('spotlight-card');
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+        });
+      });
+    }
+
+    // Smoothly advance to the next major section when clicking the floating telemetry button
+    function scrollToNextSection() {
+      const sections = Array.from(document.querySelectorAll('main section, main > div > div > div'));
+      const currentScroll = window.scrollY + 120;
+      const next = sections.find(sec => sec.offsetTop > currentScroll);
+      if (next) {
+        window.scrollTo({ top: next.offsetTop - 70, behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // ==========================================================================
+    // 9. PAGE-SPECIFIC FILTERS, MODALS & FORM SUBMISSIONS
+    // ==========================================================================
+    function setExperiencesFilter(cat) {
+      state.experiencesFilter = cat;
+      renderApp();
+    }
+
+    function setJournalCategory(cat) {
+      state.journalCategory = cat;
+      renderApp();
+    }
+
+    function handleJournalSearch(val) {
+      state.journalSearch = val;
+      const categories = ['All', 'Institutional Dispatch', 'Echo Experiences', 'Echo Foundation', 'Ventures & Strategy'];
+      const filtered = JOURNAL_ARTICLES.filter(art => {
+        const matchesCat = state.journalCategory === 'All' || art.category === state.journalCategory;
+        const q = state.journalSearch.toLowerCase();
+        const matchesSearch = !q || art.title.toLowerCase().includes(q) || art.excerpt.toLowerCase().includes(q);
+        return matchesCat && matchesSearch;
+      });
+
+      const grid = document.getElementById('journal-articles-grid');
+      if (grid) {
+        grid.innerHTML = filtered.map(art => `
+          <article
+            onclick="openArticleModal('${art.id}')"
+            class="group rounded-2xl overflow-hidden glass-panel hover:border-[#B9DDF7]/50 transition-all cursor-pointer flex flex-col justify-between"
+          >
+            <div>
+              <div class="relative h-64 overflow-hidden">
+                <img src="${art.image}" alt="${art.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#080B12] via-transparent to-transparent"></div>
+                <span class="absolute top-4 left-4 text-[10px] font-mono uppercase tracking-[0.18em] px-3 py-1 rounded-full bg-[#080B12]/80 text-[#B9DDF7] border border-[#B9DDF7]/30">
+                  ${art.category}
+                </span>
+              </div>
+              <div class="p-8 space-y-3">
+                <div class="text-xs text-[#8993A3]">
+                  ${art.date} • ${art.readTime} • By ${art.author}
+                </div>
+                <h2 class="font-serif text-2xl sm:text-3xl text-white group-hover:text-[#B9DDF7] transition-colors">
+                  ${art.title}
+                </h2>
+                <p class="text-sm text-[#C6CBD3] leading-relaxed">${art.excerpt}</p>
+              </div>
+            </div>
+            <div class="px-8 pb-8 flex items-center justify-between text-xs uppercase tracking-[0.18em] text-[#B9DDF7]">
+              <span>Read Full Article</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </div>
+          </article>
+        `).join('');
+        lucide.createIcons();
+      }
+    }
+
+    function handleCollectiveSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('col-name')?.value || 'Prospective Member';
+      const container = document.getElementById('collective-form-container');
+      if (container) {
+        container.innerHTML = `
+          <div class="p-8 rounded-2xl bg-[#101827] border border-[#B9DDF7]/40 text-center space-y-4">
+            <i data-lucide="check-circle-2" class="w-12 h-12 text-[#B9DDF7] mx-auto"></i>
+            <h3 class="font-serif text-3xl text-white">Expression of Interest Recorded</h3>
+            <p class="text-sm text-[#C6CBD3] max-w-md mx-auto">
+              Thank you, ${name}. Your profile has been logged with the Echo Collective curation desk for upcoming briefings and private invitations.
+            </p>
+            <button onclick="renderApp()" class="text-xs uppercase tracking-[0.2em] text-[#B9DDF7] underline cursor-pointer">
+              Submit Another Nomination
+            </button>
+          </div>
+        `;
+        lucide.createIcons();
+      }
+    }
+
+    function handleVenturesSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('ven-name')?.value || 'Partner';
+      const container = document.getElementById('ventures-form-container');
+      if (container) {
+        container.innerHTML = `
+          <div class="p-8 rounded-2xl bg-[#101827] border border-[#B9DDF7]/40 text-center space-y-4">
+            <i data-lucide="check-circle-2" class="w-12 h-12 text-[#B9DDF7] mx-auto"></i>
+            <h3 class="font-serif text-3xl text-white">Initiative Brief Received</h3>
+            <p class="text-sm text-[#C6CBD3] max-w-md mx-auto">
+              Thank you, ${name}. Our corporate development desk will review your submission and reach out if there is alignment for a preliminary conversation.
+            </p>
+            <button onclick="renderApp()" class="text-xs uppercase tracking-[0.2em] text-[#B9DDF7] underline cursor-pointer">
+              Submit Another Proposal
+            </button>
+          </div>
+        `;
+        lucide.createIcons();
+      }
+    }
+
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      const box = document.getElementById('newsletter-box');
+      if (box) {
+        box.innerHTML = `
+          <div class="flex items-center gap-2 text-sm text-[#B9DDF7]">
+            <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+            <span>Subscribed to Echo Journal Dispatches.</span>
+          </div>
+        `;
+        lucide.createIcons();
+      }
+    }
+
+    function selectContactCategory(cat) {
+      state.inquiryCategory = cat;
+      const pills = document.querySelectorAll('#contact-cat-pills button');
+      pills.forEach(btn => {
+        const isCurrent = btn.getAttribute('data-cat') === cat;
+        btn.className = `px-3 py-1.5 rounded-lg text-[11px] transition-all cursor-pointer border ${
+          isCurrent
+            ? 'bg-[#B9DDF7] text-[#080B12] border-[#B9DDF7] font-semibold'
+            : 'bg-[#080B12]/70 text-[#C6CBD3] border-[#C6CBD3]/20 hover:border-[#B9DDF7]/50'
+        }`;
+      });
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('cnt-name')?.value || 'Valued Correspondent';
+      const btn = document.getElementById('cnt-submit-btn');
+      if (btn) {
+        btn.innerHTML = `<span>Routing Correspondence...</span>`;
+        btn.disabled = true;
+      }
+
+      setTimeout(() => {
+        const card = document.getElementById('contact-form-card');
+        if (card) {
+          card.innerHTML = `
+            <div class="py-12 text-center space-y-5">
+              <div class="w-16 h-16 rounded-full bg-[#B9DDF7]/15 border border-[#B9DDF7]/40 flex items-center justify-center mx-auto">
+                <i data-lucide="check-circle-2" class="w-8 h-8 text-[#B9DDF7]"></i>
+              </div>
+              <div class="text-xs font-mono uppercase tracking-[0.22em] text-[#B9DDF7]">
+                INQUIRY LOGGED • ${state.inquiryCategory.toUpperCase()}
+              </div>
+              <h2 class="font-serif text-3xl sm:text-4xl text-white">
+                Thank You for Reaching Out, ${name}.
+              </h2>
+              <p class="text-sm text-[#C6CBD3] max-w-md mx-auto leading-relaxed">
+                Your correspondence regarding <strong class="text-white">${state.inquiryCategory}</strong> has been routed to the appropriate team at Echo Forever LLC. We respond to aligned inquiries promptly.
+              </p>
+              <div class="pt-4">
+                <button onclick="renderApp()" class="inline-flex items-center gap-2 rounded-full px-6 py-3 text-xs uppercase tracking-[0.16em] bg-[#101827] border border-[#C6CBD3]/25 text-white hover:border-[#B9DDF7] cursor-pointer">
+                  <span>Send Another Inquiry</span>
+                </button>
+              </div>
+            </div>
+          `;
+          lucide.createIcons();
+        }
+      }, 450);
+    }
+
+    // --- MODALS (EVENT RSVP, ARTICLE READER, LEGAL POLICIES) ---
+    function closeModal() {
+      const root = document.getElementById('modal-root');
+      if (root) root.innerHTML = '';
+    }
+
+    function openEventModal(eventId) {
+      const ev = UPCOMING_EXPERIENCES.find(item => item.id === eventId);
+      if (!ev) return;
+
+      const root = document.getElementById('modal-root');
+      root.innerHTML = `
+        <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#080B12]/85 backdrop-blur-xl overflow-y-auto">
+          <div class="relative w-full max-w-2xl rounded-3xl glass-panel border border-[#B9DDF7]/30 overflow-hidden my-8">
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-10 p-2 rounded-full bg-[#080B12]/80 text-white hover:text-[#B9DDF7] cursor-pointer" aria-label="Close modal">
+              <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="relative h-52">
+              <img src="${ev.image}" alt="${ev.title}" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#080B12] via-[#080B12]/50 to-transparent"></div>
+              <div class="absolute bottom-4 left-6 right-6">
+                <span class="text-[10px] font-mono uppercase tracking-[0.2em] px-2.5 py-1 rounded bg-[#B9DDF7] text-[#080B12] font-semibold">
+                  ${ev.category}
+                </span>
+                <h3 class="font-serif text-2xl sm:text-3xl text-white mt-2">${ev.title}</h3>
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-[#C6CBD3] bg-[#080B12]/60 p-4 rounded-xl border border-[#C6CBD3]/15">
+                <div><span class="text-[#8993A3] block">Timing:</span>${ev.timing}</div>
+                <div><span class="text-[#8993A3] block">Location:</span>${ev.location}</div>
+              </div>
+
+              <p class="text-sm text-[#C6CBD3] leading-relaxed">${ev.summary}</p>
+
+              <div>
+                <div class="text-xs font-mono uppercase tracking-[0.18em] text-[#B9DDF7] mb-2">PROGRAMMING ARCHITECTURE</div>
+                <ul class="space-y-1.5 text-xs text-[#C6CBD3]">
+                  ${ev.agenda.map(item => `
+                    <li class="flex items-center gap-2">
+                      <span class="w-1.5 h-1.5 rounded-full bg-[#B9DDF7]"></span>
+                      <span>${item}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+
+              <div id="event-rsvp-box">
+                <form onsubmit="handleEventRsvp(event, '${ev.title.replace(/'/g, "\\'")}')" class="space-y-3 pt-2 border-t border-[#C6CBD3]/15">
+                  <div class="text-xs font-mono uppercase tracking-[0.18em] text-white">REQUEST INVITATION / CREDENTIALS</div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <input id="rsvp-name" type="text" required placeholder="Full Name *" class="px-3.5 py-2.5 rounded-xl bg-[#080B12] border border-[#C6CBD3]/25 text-xs text-white focus:outline-none focus:border-[#B9DDF7]" />
+                    <input id="rsvp-email" type="email" required placeholder="Email Address *" class="px-3.5 py-2.5 rounded-xl bg-[#080B12] border border-[#C6CBD3]/25 text-xs text-white focus:outline-none focus:border-[#B9DDF7]" />
+                  </div>
+                  <div class="flex flex-wrap gap-3 pt-2">
+                    <button type="submit" class="flex-1 py-3 px-4 rounded-xl bg-[#B9DDF7] text-[#080B12] text-xs font-semibold uppercase tracking-[0.16em] cursor-pointer">
+                      Submit Attendance Request
+                    </button>
+                    <button type="button" onclick="closeModal(); navigateTo('contact', { inquiryCategory: 'Experiences & Sponsorships' });" class="py-3 px-4 rounded-xl bg-[#101827] border border-[#C6CBD3]/25 text-xs text-[#C6CBD3] hover:text-white uppercase tracking-[0.14em] cursor-pointer">
+                      Sponsorship Desk
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    function handleEventRsvp(e, title) {
+      e.preventDefault();
+      const name = document.getElementById('rsvp-name')?.value || 'Guest';
+      const box = document.getElementById('event-rsvp-box');
+      if (box) {
+        box.innerHTML = `
+          <div class="p-5 rounded-xl bg-[#B9DDF7]/10 border border-[#B9DDF7]/40 text-center space-y-2">
+            <i data-lucide="check-circle-2" class="w-7 h-7 text-[#B9DDF7] mx-auto"></i>
+            <div class="font-serif text-xl text-white">Attendance Request Registered</div>
+            <p class="text-xs text-[#C6CBD3]">
+              Thank you, ${name}. Our Echo Experiences curation desk has recorded your request for ${title}.
+            </p>
+          </div>
+        `;
+        lucide.createIcons();
+      }
+    }
+
+    function openArticleModal(articleId) {
+      const art = JOURNAL_ARTICLES.find(a => a.id === articleId);
+      if (!art) return;
+
+      const root = document.getElementById('modal-root');
+      root.innerHTML = `
+        <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#080B12]/90 backdrop-blur-xl overflow-y-auto">
+          <div class="relative w-full max-w-3xl rounded-3xl glass-panel border border-[#B9DDF7]/30 p-6 sm:p-10 max-h-[90vh] overflow-y-auto space-y-6 my-8">
+            <div class="flex items-center justify-between border-b border-[#C6CBD3]/15 pb-4">
+              <div class="flex items-center gap-3 text-xs font-mono text-[#B9DDF7]">
+                <span class="px-3 py-1 rounded-full bg-[#B9DDF7]/10 border border-[#B9DDF7]/30">${art.category}</span>
+                <span>${art.date}</span>
+                <span>•</span>
+                <span>${art.readTime}</span>
+              </div>
+              <button onclick="closeModal()" class="p-2 rounded-full bg-[#080B12] text-[#C6CBD3] hover:text-white cursor-pointer">
+                <i data-lucide="x" class="w-5 h-5"></i>
+              </button>
+            </div>
+
+            <h2 class="font-serif text-3xl sm:text-5xl text-white leading-[1.08]">${art.title}</h2>
+
+            <div class="text-xs text-[#8993A3]">
+              By <strong class="text-white">${art.author}</strong> — ${art.authorRole}
+            </div>
+
+            <div class="rounded-2xl overflow-hidden border border-[#C6CBD3]/15">
+              <img src="${art.image}" alt="${art.title}" class="w-full h-64 sm:h-80 object-cover" />
+            </div>
+
+            <div class="space-y-4 text-sm sm:text-base text-[#C6CBD3] leading-relaxed">
+              ${art.content.map((p, idx) => `<p class="${idx === 0 ? 'text-lg text-white font-light' : ''}">${p}</p>`).join('')}
+            </div>
+
+            <div class="pt-6 border-t border-[#C6CBD3]/15 flex flex-wrap items-center justify-between gap-4">
+              <button onclick="closeModal(); navigateTo('contact', { inquiryCategory: 'Media & Press' });" class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-[#B9DDF7] hover:text-white cursor-pointer">
+                <span>Respond via Editorial Desk</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </button>
+              <button onclick="closeModal()" class="px-6 py-2.5 rounded-full bg-[#B9DDF7] text-[#080B12] text-xs font-semibold uppercase tracking-[0.14em] cursor-pointer">
+                Close Reader
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    function openLegalModal(type) {
+      const isPrivacy = type === 'privacy';
+      const root = document.getElementById('modal-root');
+      root.innerHTML = `
+        <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#080B12]/85 backdrop-blur-xl">
+          <div class="relative w-full max-w-2xl rounded-3xl glass-panel p-6 sm:p-10 max-h-[85vh] overflow-y-auto space-y-6">
+            <div class="flex items-center justify-between border-b border-[#C6CBD3]/15 pb-4">
+              <div>
+                <div class="text-[10px] font-mono uppercase tracking-[0.2em] text-[#B9DDF7]">ECHO FOREVER LLC • LEGAL GOVERNANCE</div>
+                <h3 class="font-serif text-3xl text-white">${isPrivacy ? 'Privacy Policy' : 'Terms of Use'}</h3>
+              </div>
+              <button onclick="closeModal()" class="p-2 rounded-full bg-[#080B12] text-[#C6CBD3] hover:text-white cursor-pointer">
+                <i data-lucide="x" class="w-5 h-5"></i>
+              </button>
+            </div>
+
+            ${
+              isPrivacy
+                ? `
+                <div class="space-y-4 text-xs sm:text-sm text-[#C6CBD3] leading-relaxed">
+                  <p><strong>1. Data Collection & Purpose:</strong> Echo Forever LLC collects personal information voluntarily submitted through our inquiry, event registration, membership nomination, and newsletter forms solely to respond to communications and manage institutional relationships.</p>
+                  <p><strong>2. Data Ownership & Confidentiality:</strong> All attendee, partner, and inquiry data is strictly owned by Echo Forever LLC. We do not sell, rent, or commercialize personal contact records to third-party data brokers.</p>
+                  <p><strong>3. Security & Retention:</strong> We employ industry-standard encryption and access controls to safeguard correspondence. You may request access to or deletion of your contact records at any time via our Contact portal.</p>
+                </div>
+                `
+                : `
+                <div class="space-y-4 text-xs sm:text-sm text-[#C6CBD3] leading-relaxed">
+                  <p><strong>1. Institutional Presentation:</strong> This website serves as the corporate headquarters of Echo Forever LLC and presents our current active division (Echo Experiences) alongside developing platforms.</p>
+                  <p><strong>2. No Investment or Charitable Solicitation:</strong> Nothing on this website constitutes an offer to sell securities, regulated investment advice, or public charitable solicitation prior to applicable regulatory filings.</p>
+                  <p><strong>3. Intellectual Property:</strong> The Echo Forever name, EF monogram, “Where Culture Meets Capital” tagline, copy, and visual design architecture are the exclusive property of Echo Forever LLC.</p>
+                </div>
+                `
+            }
+
+            <div class="pt-4 border-t border-[#C6CBD3]/15 flex justify-end">
+              <button onclick="closeModal()" class="px-6 py-2.5 rounded-full bg-[#B9DDF7] text-[#080B12] text-xs font-semibold uppercase tracking-[0.14em] cursor-pointer">
+                Acknowledge & Close
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    // ==========================================================================
+    // 10. INITIALIZATION & SCROLL HEADER LISTENER
+    // ==========================================================================
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('site-header');
+      if (header) {
+        if (window.scrollY > 28) {
+          header.className = 'fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[#080B12]/88 backdrop-blur-xl border-b border-[#C6CBD3]/15 py-3.5 shadow-[0_10px_30px_rgba(0,0,0,0.45)]';
+        } else {
+          header.className = 'fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-gradient-to-b from-[#080B12]/90 to-transparent py-5 border-b border-[#C6CBD3]/5';
+        }
+      }
+
+      // Update Top Laser Scroll Progress Bar & Right Telemetry HUD
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? Math.min(100, Math.max(0, Math.round((window.scrollY / docHeight) * 100))) : 0;
+
+      const progressBar = document.getElementById('scroll-progress-bar');
+      if (progressBar) progressBar.style.width = `${pct}%`;
+
+      const telemetryPct = document.getElementById('telemetry-percent');
+      if (telemetryPct) telemetryPct.textContent = `${String(pct).padStart(2, '0')}%`;
+
+
+      const telemetryThumb = document.getElementById('telemetry-thumb');
+      if (telemetryThumb) telemetryThumb.style.height = `${pct}%`;
+    });
+
+    // Dynamic Footer Year
+    const footerYear = document.getElementById('footer-year');
+    if (footerYear) footerYear.textContent = new Date().getFullYear();
+
+    // Initial Application Boot
+    document.addEventListener('DOMContentLoaded', () => {
+      renderApp();
+    });
+  </script>
+</body>
+</html>
